@@ -1,16 +1,16 @@
 import myImage from '../assets/imgs/logo-phyral-white.svg';
 import '../index.css';
 
-export function Sidebar() {
+export function Sidebar({username}) {
     return (
-        <div className="bg-[#5161FF] w-[350px] fixed top-0 left-0 h-full grid justify-center content-around">
+        <div className="bg-[#5161FF] w-[350px] fixed top-0 left-0 h-full grid justify-center content-around font-main">
             <img className='' src={myImage} alt="logo" />
 
             <div className="w-fit h-fit grid grid-flow-col bg-white/20 p-3 pr-5 rounded-[50px] gap-4 items-center">
                 <img className="rounded-[50%] w-[5rem] h-[5rem]" src="https://unavatar.io/freddy74" alt="User Profile" />
                 <div>
-                    <h3 className='font-bold text-xl text-white'>Freddy Garro</h3>
-                    <a href='' className='text-sm text-white/60'>View Profile</a>
+                    <h3 className='font-medium font-secondary text-xl text-white'>{username}</h3>
+                    <a href='#' className='text-sm text-white/60'>View Profile</a>
                 </div>
             </div>
 
