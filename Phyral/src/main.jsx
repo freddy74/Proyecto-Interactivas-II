@@ -6,10 +6,74 @@ import { Sidebar } from './components/Sidebar.jsx'
 import { Welcome } from './components/Welcome.jsx'
 import { Calendar } from './components/Calendar.jsx'
 import { HorizontalCard } from './components/HorizontalCard.jsx'
+<<<<<<< HEAD
+=======
+import { SimpleButton } from './components/SimpleButton.jsx'
+import backgroundImage from './assets/imgs/signinbg.jpg'
+import logo from './assets/imgs/logo.jpg'
+>>>>>>> c7d21d8 (Primer Avance Sign In (Falta ajustar))
 
 ReactDOM.createRoot(document.getElementById('root')).render(
+  <div className="app" style={{
+    backgroundImage: `url(${backgroundImage})`,
+    backgroundSize: 'cover', backgroundRepeat: 'no-repeat', backgroundPosition: 'center'
+  }}>
+
+    <div className='align-center grid justify-center gap-10 bg-white w-[50vw] m-auto p-10 rounded-3xl' >
+
+    <div className='mt-10 mb-10'>
+    <img className='h-full ml-20 ' src={logo} alt="logo" />
+    </div>
+
+      <h2 className='text-3xl font-main font-bold'>Sign In</h2>
+
+      <form className='grid align-center gap-2'>
+        <label className='text-xs text-custom-dark font-medium'>Name:</label>
+        <input className='w-80 h-8 bg-background-main rounded-[4px]' type="text" placeholder="" />
+      </form>
+      <form className='grid align-center gap-2'>
+        <label className='text-xs text-custom-dark font-medium'>Lastname:</label>
+        <input className='w-80 h-8 bg-background-main rounded-[4px]' type="text" placeholder="" />
+      </form>
+      <form className='grid align-center gap-2'>
+        <label className='text-xs text-custom-dark font-medium'>Username:</label>
+        <input className='w-80 h-8 bg-background-main rounded-[4px]' type="text" placeholder="" />
+      </form>
+      <form className='grid align-center gap-2'>
+        <label className='text-xs text-custom-dark font-medium'>Password:</label>
+        <input className='w-80 h-8 bg-background-main rounded-[4px]' type="text" placeholder="" />
+      </form>
+      <form className='grid align-center gap-2'>
+        <label  className='text-xs text-custom-dark font-medium'>Confirm Password:</label>
+        <input className='w-80 h-8 bg-background-main rounded-[4px]' type="text" placeholder="" />
+      </form>
+
+      <div className='grid gap-4 mb-12'>
+        <SimpleButton href="{#}" name="Sign In" />
+        <a className='font-main font-semibold text-custom-dark' href="{#}">Have an account?</a>
+      </div>
+
+
+    </div>
+  </div>
+)
+
+
+
+
+
+
+
+{/*ReactDOM.createRoot(document.getElementById('root')).render(
   <>
+<<<<<<< HEAD
     <Sidebar username='Freddy Garro' />
+=======
+
+  
+
+   <Sidebar username='Freddy Garro' />
+>>>>>>> c7d21d8 (Primer Avance Sign In (Falta ajustar))
 
     <section className='grid grid-cols-1 sm:grid-cols-4 sm:ml-[23rem] p-4 gap-6'>
 
@@ -33,4 +97,5 @@ ReactDOM.createRoot(document.getElementById('root')).render(
 
     </section>
   </>
-)
+  
+)*/}
