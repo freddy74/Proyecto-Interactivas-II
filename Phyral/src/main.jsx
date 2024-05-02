@@ -7,6 +7,7 @@ import { Welcome } from './components/Welcome.jsx'
 // import { CourseCard } from './components/CourseCard.jsx'
 import { HorizontalCard } from './components/HorizontalCard.jsx'
 // import { SimpleButton } from './components/SimpleButton.jsx'
+import {Calendar} from './components/Calendar.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <>
@@ -27,6 +28,9 @@ ReactDOM.createRoot(document.getElementById('root')).render(
           <h3 className='text-2xl font-secondary font-bold mb-5'>For Today</h3>
           <HorizontalCard title="React Homework" course="Web Development" />
         </section>
+
+        <Calendar/> 
+
       </div>
 
     </section>
