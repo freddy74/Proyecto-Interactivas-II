@@ -1,21 +1,17 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-import "./index.css";
-import { Slider } from "./components/Slider.jsx";
-import { Sidebar } from "./components/Sidebar.jsx";
-import { Welcome } from "./components/Welcome.jsx";
-import { Calendar } from "./components/Calendar.jsx";
-import { HorizontalCard } from "./components/HorizontalCard.jsx";
-import { SignIn } from "./components/SignIn.jsx";
-import { SimpleButton } from "./components/SimpleButton.jsx";
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import './index.css'
+import { Slider } from './components/Slider.jsx'
+import { Sidebar } from './components/Sidebar.jsx'
+import { Welcome } from './components/Welcome.jsx'
+// import { CourseCard } from './components/CourseCard.jsx'
+import { HorizontalCard } from './components/HorizontalCard.jsx'
+// import { SimpleButton } from './components/SimpleButton.jsx'
 
-ReactDOM.createRoot(document.getElementById("root")).render(
+ReactDOM.createRoot(document.getElementById('root')).render(
   <>
-    <SignIn />
 
-    {/* 
-
-   <Sidebar username='Freddy Garro' />
+    <Sidebar username='Freddy Garro' />
 
     <section className='grid grid-cols-1 sm:grid-cols-4 sm:ml-[23rem] p-4 gap-6'>
 
@@ -33,10 +29,6 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         </section>
       </div>
 
-      <div className="mt-5">
-        <Calendar />
-      </div>
-
-    </section> */}
+    </section>
   </>
 );
