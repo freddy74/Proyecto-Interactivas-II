@@ -1,21 +1,19 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import './index.css'
-import { Slider } from './components/Slider.jsx'
-import { Sidebar } from './components/Sidebar.jsx'
-import { Welcome } from './components/Welcome.jsx'
-import { Calendar } from './components/Calendar.jsx'
-import { HorizontalCard } from './components/HorizontalCard.jsx'
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import { Slider } from "./components/Slider.jsx";
+import { Sidebar } from "./components/Sidebar.jsx";
+import { Welcome } from "./components/Welcome.jsx";
+import { Calendar } from "./components/Calendar.jsx";
+import { HorizontalCard } from "./components/HorizontalCard.jsx";
+import { SignIn } from "./components/SignIn.jsx";
+import { SimpleButton } from "./components/SimpleButton.jsx";
 
-import { SimpleButton } from './components/SimpleButton.jsx'
-import backgroundImage from './assets/imgs/signinbg.jpg'
-import logo from './assets/imgs/logo.jpg'
-
-
-
-ReactDOM.createRoot(document.getElementById('root')).render(
+ReactDOM.createRoot(document.getElementById("root")).render(
   <>
+    <SignIn />
 
+    {/* 
 
    <Sidebar username='Freddy Garro' />
 
@@ -39,7 +37,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Calendar />
       </div>
 
-    </section>
+    </section> */}
   </>
-  
-)
+);
