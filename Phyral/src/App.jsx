@@ -18,7 +18,7 @@ export function App() {
     <>
       {/* DASHBOARD */}
 
-      <Sidebar username="Freddy Garro" />
+      {/* <Sidebar username="Freddy Garro" />
 
       <section className="grid grid-cols-1 xl:grid-cols-4 lg:ml-[23rem] mx-4 xl:gap-6">
         <div className="grid mt-5 col-span-3 lg:col-span-3">
@@ -41,12 +41,12 @@ export function App() {
           <Calendar />
           <GeneralStats />
         </div>
-      </section>
+      </section> */}
 
       {/* DASHBOARD  */}
 
       {/* PROFILE */}
-      {/* <div>
+      <div>
         <Sidebar username="Freddy Garro" />
 
         <section className="grid grid-cols-1 sm:grid-cols-4 sm:ml-[23rem] p-4 gap-6">
@@ -63,10 +63,14 @@ export function App() {
               role="Student"
               email="freddy.garro@ucr.ac.cr"
             />
-            <AdditionalInfo />
+            <AdditionalInfo 
+              sports="Baloncesto, Gym, Fútbol"
+              diseases="No hay afectaciones"
+              hours="8 horas"  
+            />
           </div>
         </section>
-      </div> */}
+      </div>
       {/* PROFILE */}
     </>
   );
