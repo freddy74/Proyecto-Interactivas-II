@@ -16,6 +16,9 @@ export default {
         "custom-green": "#58DA5C",
         "custom-dark": "#3D3D3D",
       },
+      shadows:{
+        "blue-shadow": "0px 8px 28px 0px rgba(81, 97, 255, 0.5)",
+      },
     },
   },
   plugins: [],

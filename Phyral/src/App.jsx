@@ -12,6 +12,7 @@ import { MainInfo } from "./components/profile/MainInfo.jsx";
 import { PersonalInfo } from "./components/profile/PersonalInfo.jsx";
 import { AdditionalInfo } from "./components/profile/AdditionalInfo.jsx";
 import { GeneralStats } from "./components/GeneralStats.jsx";
+import { EventsDetailsPopup } from "./components/events/EventDetailsPopup.jsx";
 
 export function App() {
   return (
@@ -46,7 +47,7 @@ export function App() {
       {/* DASHBOARD  */}
 
       {/* PROFILE */}
-      <div>
+      {/* <div>
         <Sidebar username="Freddy Garro" />
 
         <section className="grid grid-cols-1 sm:grid-cols-4 sm:ml-[23rem] p-4 gap-6">
@@ -70,8 +71,26 @@ export function App() {
             />
           </div>
         </section>
-      </div>
+      </div> */}
       {/* PROFILE */}
+      
+
+      
+      <div>
+            <EventsDetailsPopup
+            eventName="Tailwinds homework"
+            course="Web Development"
+            date="April 12, 2024"
+            category="Homework"
+            status="Pending"
+            eventImg="https://kinsta.com/wp-content/uploads/2022/06/what-is-react-js-feature-image.png"
+            description="Lorem ipsum dolor sit amet consectetur. Commodo tellus orci tincidunt quis. Nulla semper non massa sit ultrices neque. Volutpat cursus lorem nunc id elementum tellus convallis. Sagittis arcu neque tempor id convallis magnis suscipit elementum nulla. Eu lobortis non diam ut donec urna sapien viverra eleifend. Proin a enim vitae tincidunt eget interdum dui.
+            Convallis enim fringilla sem nunc elementum lorem egestas vitae. Faucibus lectus amet nisl malesuada in eget id lorem faucibus. Turpis lacus scelerisque facilisis diam."
+            />
+            
+            <Sidebar/>
+        </div>    
+      
     </>
   );
 }
