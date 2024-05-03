@@ -1,6 +1,6 @@
-import myImage from '../assets/imgs/task-placeholder.png';
-import { SimpleButton } from './SimpleButton.jsx'
-import '../index.css';
+import myImage from '../../assets/imgs/task-placeholder.png';
+import { SimpleButton } from '../SimpleButton.jsx'
+import '../../index.css';
 
 export function HorizontalCard({ title, course }) {
     return (

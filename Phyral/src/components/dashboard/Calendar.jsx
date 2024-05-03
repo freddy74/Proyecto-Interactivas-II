@@ -1,5 +1,5 @@
-import myImage from '../assets/imgs/course-placeholder.png';
-import '../index.css';
+import myImage from '../../assets/imgs/course-placeholder.png';
+import '../../index.css';
 import "cally";
 
 export function Calendar() {

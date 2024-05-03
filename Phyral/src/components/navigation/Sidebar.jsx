@@ -1,5 +1,5 @@
-import myImage from '../assets/imgs/logo-phyral-white.svg';
-import '../index.css';
+import myImage from '../../assets/imgs/logo-phyral-white.svg';
+import '../../index.css';
 
 export function Sidebar({username}) {
     return (

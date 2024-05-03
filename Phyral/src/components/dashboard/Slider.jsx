@@ -1,10 +1,10 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
-import { CourseCard } from './CourseCard.jsx';
+import { CourseCard } from '../CourseCard.jsx';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import '../index.css';
+import '../../index.css';
 
 export function Slider() {
     return (

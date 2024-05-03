@@ -1,17 +1,17 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import { Slider } from "./components/Slider.jsx";
-import { Sidebar } from "./components/Sidebar.jsx";
-import { Welcome } from "./components/Welcome.jsx";
+import { Slider } from "./components/dashboard/Slider.jsx";
+import { Sidebar } from "./components/navigation/Sidebar.jsx";
+import { Welcome } from "./components/dashboard/Welcome.jsx";
 import { CourseCard } from "./components/CourseCard.jsx";
-import { HorizontalCard } from "./components/HorizontalCard.jsx";
+import { HorizontalCard } from "./components/dashboard/HorizontalCard.jsx";
 import { SimpleButton } from "./components/SimpleButton.jsx";
-import { Calendar } from "./components/Calendar.jsx";
+import { Calendar } from "./components/dashboard/Calendar.jsx";
 import { MainInfo } from "./components/profile/MainInfo.jsx";
 import { PersonalInfo } from "./components/profile/PersonalInfo.jsx";
 import { AdditionalInfo } from "./components/profile/AdditionalInfo.jsx";
-import { GeneralStats } from "./components/GeneralStats.jsx";
+import { GeneralStats } from "./components/dashboard/GeneralStats.jsx";
 import { EventsDetailsPopup } from "./components/events/EventDetailsPopup.jsx";
 
 export function App() {
@@ -19,7 +19,7 @@ export function App() {
     <>
       {/* DASHBOARD */}
 
-      {/* <Sidebar username="Freddy Garro" />
+      <Sidebar username="Freddy Garro" />
 
       <section className="grid grid-cols-1 xl:grid-cols-4 lg:ml-[23rem] mx-4 xl:gap-6">
         <div className="grid mt-5 col-span-3 lg:col-span-3">
@@ -42,7 +42,7 @@ export function App() {
           <Calendar />
           <GeneralStats />
         </div>
-      </section> */}
+      </section>
 
       {/* DASHBOARD  */}
 
@@ -76,7 +76,7 @@ export function App() {
       
 
       
-      <div>
+      {/* <div>
             <EventsDetailsPopup
             eventName="Tailwinds homework"
             course="Web Development"
@@ -89,7 +89,7 @@ export function App() {
             />
             
             <Sidebar/>
-        </div>    
+        </div>     */}
       
     </>
   );

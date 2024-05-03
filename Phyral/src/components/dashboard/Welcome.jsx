@@ -1,5 +1,5 @@
-import '../index.css';
-import { SimpleButton } from './SimpleButton.jsx'
+import '../../index.css';
+import { SimpleButton } from '../SimpleButton.jsx'
 
 export function Welcome({ username }) {
     return (
