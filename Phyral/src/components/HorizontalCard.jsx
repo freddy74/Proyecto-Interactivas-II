@@ -6,9 +6,9 @@ export function HorizontalCard({ title, course }) {
     return (
         <>
             {/* must change width based on the place where Card is needed */}
-            <div className='w-full h-full grid grid-flow-col gap-5 p-4 bg-white rounded-xl font-main'>
+            <div className='w-fit grid grid-flow-col gap-5 p-4 bg-white rounded-xl font-main'>
                 <div className='grid'>
-                    <img className='h-full ' src={myImage} alt="" />
+                    <img className='h-full w-full max-sm:hidden' src={myImage} alt="" />
                 </div>
 
                 <div className='grid gap-10 content-between'>

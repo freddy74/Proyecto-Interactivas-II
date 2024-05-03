@@ -5,8 +5,8 @@ export function Welcome({ username }) {
     return (
         <>
 
-            <div className='w-[65rem] p-14 flex items-center justify-between gap-10 rounded-2xl font-main bg-custom-light-blue'>
-                <div className='grid gap-4'>
+            <div className='p-14 flex items-center justify-between gap-10 rounded-2xl font-main bg-custom-light-blue max-sm:flex-col-reverse'>
+                <div className='grid gap-4 max-sm:justify-items-center max-sm:text-center'>
                     <h1 className='text-5xl font-secondary font-black'>Welcome, {username}!</h1>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibu</p>
                     <SimpleButton href="{#}" name="View Events" />

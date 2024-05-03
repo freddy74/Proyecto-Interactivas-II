@@ -3,7 +3,7 @@ import '../index.css';
 
 export function Sidebar({username}) {
     return (
-        <div className="bg-[#5161FF] w-[350px] fixed top-0 left-0 h-full grid justify-center content-around font-main max-sm:left-[-30rem]">
+        <aside className="bg-[#5161FF] w-[350px] fixed top-0 left-0 h-full grid justify-center content-around font-main max-lg:left-[-30rem]">
             <img className='' src={myImage} alt="logo" />
 
             <div className="w-fit h-fit grid grid-flow-col bg-white/20 p-3 pr-5 rounded-[50px] gap-4 items-center">
@@ -103,7 +103,7 @@ export function Sidebar({username}) {
             </div>
 
 
-        </div>
+        </aside>
 
     )
 }

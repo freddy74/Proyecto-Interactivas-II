@@ -5,10 +5,10 @@ import "cally";
 export function Calendar() {
     return (
         <>
-            <div className="p-4 h-[20rem] w-fit font-main rounded-lg bg-white">
+            <div className="p-6 font-main rounded-lg bg-white">
                 <calendar-range months="1"
                     locale="en-GB">
-                    <svg
+                    <svg class="w-6 h-6 bg-white" 
                         aria-label="Previous"
                         slot="previous"
                         xmlns="http://www.w3.org/2000/svg"
@@ -18,7 +18,7 @@ export function Calendar() {
                     >
                         <path d="M15.75 19.5 8.25 12l7.5-7.5"></path>
                     </svg>
-                    <svg
+                    <svg class="w-6 h-6 text-gray-800 dark:text-black bg-white"
                         aria-label="Next"
                         slot="next"
                         xmlns="http://www.w3.org/2000/svg"
@@ -28,7 +28,7 @@ export function Calendar() {
                     >
                         <path d="m8.25 4.5 7.5 7.5-7.5 7.5"></path>
                     </svg>
-                    <div class="grid">
+                    <div class="">
                         <calendar-month></calendar-month>
                     </div>
                 </calendar-range>
