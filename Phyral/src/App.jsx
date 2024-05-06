@@ -47,7 +47,7 @@ export function App() {
       {/* DASHBOARD  */}
 
       {/* PROFILE */}
-      {/* <div>
+      <div>
         <Sidebar username="Freddy Garro" />
 
         <section className="grid grid-cols-1 sm:grid-cols-4 sm:ml-[23rem] p-4 gap-6">
@@ -71,7 +71,7 @@ export function App() {
             />
           </div>
         </section>
-      </div> */}
+      </div>
       {/* PROFILE */}
 
 
@@ -92,7 +92,7 @@ export function App() {
         </div>     */}
 
       
-      <Sidebar />
+      {/* <Sidebar />
       <section className="flex sm:ml-[22rem] p-6 gap-6">
         <div className="flex flex-col mt-5 gap-6 w-[100vw]">
           <h1 className="text-custom-dark font-secondary font-black text-[40px]">My events</h1>
@@ -140,7 +140,7 @@ export function App() {
             />
           </div>
         </div>
-      </section>
+      </section> */}
 
     </>
   );
