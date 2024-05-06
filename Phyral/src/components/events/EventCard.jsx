@@ -1,5 +1,7 @@
 import '../../index.css';
 
+import { SimpleButton } from '../SimpleButton';
+
 export function EventCard({ description, eventName, taskImg, category }) {
     return (
         <>
@@ -10,7 +12,7 @@ export function EventCard({ description, eventName, taskImg, category }) {
                     <p className='text-[14px] font-normal opacity-75'>{description}</p>
                     <div className='flex flex-row justify-between items-center'>
                         <p className='text-[14px] font-bold'>{category}</p>
-                        <a className='bg-custom-blue text-white px-6 py-1 rounded-md' href="">See more</a>
+                        <a className='bg-custom-blue text-white px-6 py-1 rounded-md hover:opacity-90 duration-300 transition-all shadow-[0_8px_28px_0_rgba(81,97,255,0.35)] ' href="">See more</a>
                     </div>
                 </div>
             </div>

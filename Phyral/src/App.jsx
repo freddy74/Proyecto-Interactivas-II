@@ -91,8 +91,8 @@ export function App() {
             <Sidebar/>
         </div>     */}
 
+      
       <Sidebar />
-
       <section className="flex sm:ml-[22rem] p-6 gap-6">
         <div className="flex flex-col mt-5 gap-6 w-[100vw]">
           <h1 className="text-custom-dark font-secondary font-black text-[40px]">My events</h1>
