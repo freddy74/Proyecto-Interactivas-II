@@ -1,15 +1,16 @@
 import '../../index.css';
+import { EditButton } from '../navigation/EditButton';
 
 export function MainInfo({ username, profileImg, location, occupation }) {
     return (
         <>
-            <div className='lg:w-[65rem] md:w-[65rem] w-[90vw] p-4 md:p-14 flex flex-col md-flex-row items-start gap-10 rounded-2xl font-main bg-white relative'>
+            <div className='lg:w-[65rem] md:w-[65rem] w-[90vw] md:p-[60px] p-[20px] flex flex-col md-flex-row items-start rounded-2xl font-main border-solid border-[0.5px] border-custom-blue border-opacity-50 bg-white relative'>
 
-                <div className='flex max-sm:flex-col flex-row  justify-between gap-10 text-custom-dark '> {/**profile content */}
+                <div className='flex max-sm:flex-col flex-row md:gap-[40px] gap-[20px] justify-between text-custom-dark '> {/**profile content */}
 
                     {/**profile image */}
                     <div>
-                        <img className='w-32 h-32 md:w-[180px] md:h-[180px] rounded-full' src={profileImg} alt="" />
+                        <img className='w-32 h-32 md:w-[180px] md:h-[180px] rounded-full ' src={profileImg} alt="" />
                     </div>
                     {/**profile image */}
 
@@ -52,11 +53,7 @@ export function MainInfo({ username, profileImg, location, occupation }) {
 
                 </div> {/**profile content */}
 
-                {/**edit button */}
-                <div>
-                    <a className='text-sm font-semibold opacity-75 absolute top-6 right-8' href="">Edit</a>
-                </div>
-                {/**edit button */}
+                <EditButton href="#"/>
             </div>
         </>
     )

@@ -47,30 +47,27 @@ export function App() {
       {/* DASHBOARD  */}
 
       {/* PROFILE */}
-      <div>
+      <div className="flex justify-end">
         <Sidebar username="Freddy Garro" />
-
-        <section className="grid grid-cols-1 sm:grid-cols-4 sm:ml-[23rem] p-4 gap-6">
-          <div className="grid col-span-3 mt-5 gap-6">
-            <MainInfo
-              username="Freddy Garro Masis"
-              profileImg="https://unavatar.io/freddy74"
-              location="Esparza, Puntarenas"
-              occupation="Student"
-            />
-            <PersonalInfo
-              firstName="Freddy"
-              lastName="Garro"
-              role="Student"
-              email="freddy.garro@ucr.ac.cr"
-            />
-            <AdditionalInfo 
-              sports="Baloncesto, Gym, Fútbol"
-              diseases="No hay afectaciones"
-              hours="8 horas"  
-            />
-          </div>
-        </section>
+        <div className="flex flex-col md:w-[75%] w-[100vw] p-[40px] gap-[20px] items-center justify-center">
+          <MainInfo
+            username="Freddy Garro Masis"
+            profileImg="https://unavatar.io/freddy74"
+            location="Esparza, Puntarenas"
+            occupation="Student"
+          />
+          <PersonalInfo
+            firstName="Freddy"
+            lastName="Garro"
+            role="Student"
+            email="freddy.garro@ucr.ac.cr"
+          />
+          <AdditionalInfo
+            sports="Baloncesto, Gym, Fútbol"
+            diseases="No hay afectaciones"
+            hours="8 horas"
+          />
+        </div>
       </div>
       {/* PROFILE */}
 
@@ -91,7 +88,7 @@ export function App() {
             <Sidebar/>
         </div>     */}
 
-      
+
       {/* <Sidebar />
       <section className="flex sm:ml-[22rem] p-6 gap-6">
         <div className="flex flex-col mt-5 gap-6 w-[100vw]">
