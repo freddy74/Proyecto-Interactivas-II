@@ -33,7 +33,7 @@ export function Sidebar({ username }) {
 
       <aside
         className={`${isOpen ? "left-0" : "left-[-30rem]"
-          } bg-custom-blue md:w-[25%] w-[90vw] h-auto flex flex-col justify-between p-[60px] gap-[30px] content-around font-main z-50 transition-all duration-500 lg:left-0`}
+          } bg-custom-blue md:w-[25%] w-[90vw] h-auto md:flex flex-col hidden justify-between p-[40px] gap-[30px] content-around font-main z-50 transition-all duration-500 lg:left-0`}
       >
         <button className="absolute top-0 left-[22rem] lg:hidden" onClick={mobileButton}>
           <svg
@@ -53,7 +53,7 @@ export function Sidebar({ username }) {
         </button>
 
 
-        <div className="flex flex-col gap-[30px]">
+        <div className="flex flex-col gap-[40px]">
           <img className="" src={myImage} alt="logo" />
 
           <div className="flex bg-white/10 rounded-[50px] p-[10px] gap-[20px] items-center">
@@ -272,7 +272,6 @@ export function Sidebar({ username }) {
           <div className="border-solid border-[1px] border-white border-opacity-75 rounded-full w-full h-auto"></div>
 
           <a
-
             className="flex gap-[10px] px-[20px] py-[10px] hover:bg-white/10 hover:rounded-[10px]"
             href=""
           >

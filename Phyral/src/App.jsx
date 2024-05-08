@@ -14,6 +14,8 @@ import { AdditionalInfo } from "./components/profile/AdditionalInfo.jsx";
 import { GeneralStats } from "./components/dashboard/GeneralStats.jsx";
 import { EventsDetailsPopup } from "./components/events/EventDetailsPopup.jsx";
 import { EventCard } from "./components/events/EventCard.jsx";
+import { Search } from "./components/navigation/Search.jsx";
+import { Filter } from "./components/navigation/Filter.jsx";
 export function App() {
   return (
     <>
@@ -47,7 +49,7 @@ export function App() {
       {/* DASHBOARD  */}
 
       {/* PROFILE */}
-      <div className="flex justify-end">
+      {/* <div className="flex justify-end">
         <Sidebar username="Freddy Garro" />
         <div className="flex flex-col md:w-[75%] w-[100vw] p-[40px] gap-[20px] items-center justify-center">
           <MainInfo
@@ -68,7 +70,7 @@ export function App() {
             hours="8 horas"
           />
         </div>
-      </div>
+      </div> */}
       {/* PROFILE */}
 
 
@@ -89,56 +91,63 @@ export function App() {
         </div>     */}
 
 
-      {/* <Sidebar />
-      <section className="flex sm:ml-[22rem] p-6 gap-6">
-        <div className="flex flex-col mt-5 gap-6 w-[100vw]">
-          <h1 className="text-custom-dark font-secondary font-black text-[40px]">My events</h1>
-          <div className="grid grid-cols-2 max-sm:grid-cols-1 gap-4 w-full">
-            <EventCard
-              taskImg="https://kinsta.com/wp-content/uploads/2022/01/tailwind-css.jpg"
-              eventName="React’s homework"
-              description="Lorem ipsum dolor sit amet consectetur. Ut euismod venenatis nisi feugiat eleifend ultrices purus penatibus nibh."
-              category="Web Development"
-            />
 
-            <EventCard
-              taskImg="https://kinsta.com/wp-content/uploads/2022/01/tailwind-css.jpg"
-              eventName="React’s homework"
-              description="Lorem ipsum dolor sit amet consectetur. Ut euismod venenatis nisi feugiat eleifend ultrices purus penatibus nibh."
-              category="Web Development"
-            />
+      <div className="flex justify-end">
+        <Sidebar />
+        <section className="flex md:w-[75%] w-[100vw] p-[40px] gap-[20px]">
+          <div className="flex flex-col gap-[20px]">
+            <h1 className="text-custom-dark font-secondary font-black text-[40px]">My events</h1>
+            <div className="flex justify-between items-center">
+              <Filter />
+              <Search />
+            </div>
+            <div className="grid grid-cols-2 max-sm:grid-cols-1 gap-4 w-full">
+              <EventCard
+                taskImg="https://kinsta.com/wp-content/uploads/2022/01/tailwind-css.jpg"
+                eventName="React’s homework"
+                description="Lorem ipsum dolor sit amet consectetur. Ut euismod venenatis nisi feugiat eleifend ultrices purus penatibus nibh."
+                category="Web Development"
+              />
 
-            <EventCard
-              taskImg="https://kinsta.com/wp-content/uploads/2022/01/tailwind-css.jpg"
-              eventName="React’s homework"
-              description="Lorem ipsum dolor sit amet consectetur. Ut euismod venenatis nisi feugiat eleifend ultrices purus penatibus nibh."
-              category="Web Development"
-            />
+              <EventCard
+                taskImg="https://kinsta.com/wp-content/uploads/2022/01/tailwind-css.jpg"
+                eventName="React’s homework"
+                description="Lorem ipsum dolor sit amet consectetur. Ut euismod venenatis nisi feugiat eleifend ultrices purus penatibus nibh."
+                category="Web Development"
+              />
 
-            <EventCard
-              taskImg="https://kinsta.com/wp-content/uploads/2022/01/tailwind-css.jpg"
-              eventName="React’s homework"
-              description="Lorem ipsum dolor sit amet consectetur. Ut euismod venenatis nisi feugiat eleifend ultrices purus penatibus nibh."
-              category="Web Development"
-            />
+              <EventCard
+                taskImg="https://kinsta.com/wp-content/uploads/2022/01/tailwind-css.jpg"
+                eventName="React’s homework"
+                description="Lorem ipsum dolor sit amet consectetur. Ut euismod venenatis nisi feugiat eleifend ultrices purus penatibus nibh."
+                category="Web Development"
+              />
 
-            <EventCard
-              taskImg="https://kinsta.com/wp-content/uploads/2022/01/tailwind-css.jpg"
-              eventName="React’s homework"
-              description="Lorem ipsum dolor sit amet consectetur. Ut euismod venenatis nisi feugiat eleifend ultrices purus penatibus nibh."
-              category="Web Development"
-            />
+              <EventCard
+                taskImg="https://kinsta.com/wp-content/uploads/2022/01/tailwind-css.jpg"
+                eventName="React’s homework"
+                description="Lorem ipsum dolor sit amet consectetur. Ut euismod venenatis nisi feugiat eleifend ultrices purus penatibus nibh."
+                category="Web Development"
+              />
 
-            <EventCard
-              taskImg="https://kinsta.com/wp-content/uploads/2022/01/tailwind-css.jpg"
-              eventName="React’s homework"
-              description="Lorem ipsum dolor sit amet consectetur. Ut euismod venenatis nisi feugiat eleifend ultrices purus penatibus nibh."
-              category="Web Development"
-            />
+              <EventCard
+                taskImg="https://kinsta.com/wp-content/uploads/2022/01/tailwind-css.jpg"
+                eventName="React’s homework"
+                description="Lorem ipsum dolor sit amet consectetur. Ut euismod venenatis nisi feugiat eleifend ultrices purus penatibus nibh."
+                category="Web Development"
+              />
+
+              <EventCard
+                taskImg="https://kinsta.com/wp-content/uploads/2022/01/tailwind-css.jpg"
+                eventName="React’s homework"
+                description="Lorem ipsum dolor sit amet consectetur. Ut euismod venenatis nisi feugiat eleifend ultrices purus penatibus nibh."
+                category="Web Development"
+              />
+            </div>
           </div>
-        </div>
-      </section> */}
-
+        </section>
+      </div>
+      
     </>
   );
 }
