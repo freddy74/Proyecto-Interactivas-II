@@ -87,21 +87,21 @@ export function App() {
             Convallis enim fringilla sem nunc elementum lorem egestas vitae. Faucibus lectus amet nisl malesuada in eget id lorem faucibus. Turpis lacus scelerisque facilisis diam."
             />
             
-            <Sidebar/>
+            <Sidebar username="Freddy Garro"/>
         </div>     */}
 
 
 
       <div className="flex justify-end">
-        <Sidebar />
-        <section className="flex md:w-[75%] w-[100vw] p-[40px] gap-[20px]">
+        <Sidebar username="Freddy Garro"/>
+        <section className="flex md:w-[75%] w-[100vw] md:p-[40px] p-[20px] gap-[20px]">
           <div className="flex flex-col gap-[20px]">
             <h1 className="text-custom-dark font-secondary font-black text-[40px]">My events</h1>
             <div className="flex justify-between items-center">
               <Filter />
               <Search />
             </div>
-            <div className="grid grid-cols-2 max-sm:grid-cols-1 gap-4 w-full">
+            <div className="grid grid-cols-2 max-sm:grid-cols-1 gap-[20px] w-full">
               <EventCard
                 taskImg="https://kinsta.com/wp-content/uploads/2022/01/tailwind-css.jpg"
                 eventName="React’s homework"
@@ -147,7 +147,7 @@ export function App() {
           </div>
         </section>
       </div>
-      
+
     </>
   );
 }
