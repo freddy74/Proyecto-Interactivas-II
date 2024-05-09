@@ -1,9 +1,9 @@
 import { useState } from "react";
 import myImage from "../../assets/imgs/logo-phyral-white.svg";
 import "../../index.css";
+import { NavLink } from "react-router-dom";
 
 export function Sidebar({ username }) {
-
   const [isOpen, setIsOpen] = useState(false);
   function mobileButton() {
     setIsOpen(!isOpen);
@@ -32,10 +32,14 @@ export function Sidebar({ username }) {
       </div>
 
       <aside
-        className={`${isOpen ? "left-0" : "left-[-30rem]"
-          } bg-custom-blue md:w-[25%] w-[90vw] h-auto md:flex flex-col hidden justify-between p-[40px] gap-[30px] content-around font-main z-50 transition-all duration-500 lg:left-0`}
+        className={`${
+          isOpen ? "left-0" : "left-[-30rem]"
+        } bg-custom-blue md:w-[25%] w-[90vw] h-screen md:flex flex-col hidden justify-between p-[40px] gap-[30px] content-around font-main z-50 transition-all duration-500 lg:left-0`}
       >
-        <button className="absolute top-0 left-[22rem] lg:hidden" onClick={mobileButton}>
+        <button
+          className="absolute top-0 left-[22rem] lg:hidden"
+          onClick={mobileButton}
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -52,7 +56,6 @@ export function Sidebar({ username }) {
           </svg>
         </button>
 
-
         <div className="flex flex-col gap-[40px]">
           <img className="" src={myImage} alt="logo" />
 
@@ -66,16 +69,17 @@ export function Sidebar({ username }) {
               <h3 className="font-medium font-secondary text-xl text-white">
                 {username}
               </h3>
-              <a href="#" className="text-sm text-white/60">
+              <NavLink to="/profile" className="text-sm text-white/60">
                 View Profile
-              </a>
+              </NavLink>
             </div>
           </div>
 
           <div className="flex flex-col text-white font-bold gap-[20px]">
-            <a
+            <NavLink
+              to="/"
+              aria-current="page"
               className="flex gap-[10px] px-[20px] py-[10px] hover:bg-white/10 hover:rounded-[10px]"
-              href=""
             >
               <svg
                 width="22"
@@ -109,7 +113,7 @@ export function Sidebar({ username }) {
                 </defs>
               </svg>
               Dashboard
-            </a>
+            </NavLink>
 
             <a
               className="flex gap-[10px] px-[20px] py-[10px] hover:bg-white/10 hover:rounded-[10px]"
@@ -157,9 +161,9 @@ export function Sidebar({ username }) {
               Overview
             </a>
 
-            <a
+            <NavLink
+              to="/events"
               className="flex gap-[10px] px-[20px] py-[10px] hover:bg-white/10 hover:rounded-[10px]"
-              href=""
             >
               <svg
                 width="24"
@@ -181,7 +185,7 @@ export function Sidebar({ username }) {
                 </defs>
               </svg>
               Tasks
-            </a>
+            </NavLink>
 
             <a
               className="flex gap-[10px] px-[20px] py-[10px] hover:bg-white/10 hover:rounded-[10px]"
@@ -223,7 +227,10 @@ export function Sidebar({ username }) {
                     d="M13.9788 8.02051H8.02051V13.9788H13.9788V8.02051Z"
                     fill="white"
                   />
-                  <path d="M13.9788 0H8.02051V5.95833H13.9788V0Z" fill="white" />
+                  <path
+                    d="M13.9788 0H8.02051V5.95833H13.9788V0Z"
+                    fill="white"
+                  />
                   <path
                     d="M19.2503 0H16.042V5.95833H22.0003V2.75C22.0003 2.02065 21.7106 1.32118 21.1949 0.805456C20.6791 0.289731 19.9797 0 19.2503 0V0Z"
                     fill="white"
@@ -263,9 +270,7 @@ export function Sidebar({ username }) {
               </svg>
               Settings
             </a>
-
           </div>
-
         </div>
 
         <div className="flex flex-col gap-[30px] text-white font-bold ">
