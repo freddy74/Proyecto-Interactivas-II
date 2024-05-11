@@ -6,7 +6,12 @@ calendar-range {
     width: 100%;
 }
 
-calendar-month{
+calendar-month {
     width: 100%;
 
+}
+
+/* temporal fixing for template columns */
+.minmax-200 {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
