@@ -15,3 +15,9 @@ calendar-month {
 .minmax-200 {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
+
+.MuiDateCalendar-root {
+    width: 100%;
+    padding: 2rem;
+    
+}

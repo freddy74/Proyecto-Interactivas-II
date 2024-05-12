@@ -7,11 +7,12 @@ export function Sidebar({ username }) {
   const [isOpen, setIsOpen] = useState(false);
   function mobileButton() {
     setIsOpen(!isOpen);
+    console.log(isOpen);
   }
 
   return (
     <>
-      <div className="fixed xl:hidden z-50 left-3 top-5">
+      <div className="fixed lg:hidden z-50 left-0 top-5">
         <button className="mx-4" onClick={mobileButton}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -34,10 +35,10 @@ export function Sidebar({ username }) {
       <aside
         className={`${
           isOpen ? "left-0" : "left-[-30rem]"
-        } bg-custom-blue fixed md:w-[25%] w-[90vw] h-screen md:flex flex-col hidden justify-between p-[40px] gap-[30px] content-around font-main z-50 transition-all duration-500 lg:left-0`}
+        } bg-custom-blue w-[300px] fixed top-0 left-0 h-full grid gap-[30px] justify-center content-around font-main z-50 transition-all duration-500 lg:left-0`}
       >
         <button
-          className="absolute top-0 left-[22rem] lg:hidden"
+          className="absolute top-0 left-[19rem] lg:hidden"
           onClick={mobileButton}
         >
           <svg

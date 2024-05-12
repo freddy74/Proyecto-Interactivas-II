@@ -5,8 +5,8 @@ import { Sidebar } from "../navigation/Sidebar";
 export function Overview() {
   return (
     <>
-      {/* <Sidebar username="Freddy Garro" /> */}
-      <section className="text-custom-dark grid mx-4">
+      <Sidebar username="Freddy Garro" />
+      <section className="text-custom-dark grid mx-4 lg:ml-[20rem] mt-[4.1rem]">
         <h1 className="text-2xl font-secondary font-bold mb-5">Progress</h1>
         <div className="grid gap-6 minmax-200">
           <CourseProgress
