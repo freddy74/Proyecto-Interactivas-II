@@ -34,7 +34,7 @@ export function Sidebar({ username }) {
       <aside
         className={`${
           isOpen ? "left-0" : "left-[-30rem]"
-        } bg-custom-blue md:w-[25%] w-[90vw] h-screen md:flex flex-col hidden justify-between p-[40px] gap-[30px] content-around font-main z-50 transition-all duration-500 lg:left-0`}
+        } bg-custom-blue md:w-[25%] w-[90vw] h-auto md:flex flex-col hidden justify-between p-[40px] gap-[30px] content-around font-main z-50 transition-all duration-500 lg:left-0`}
       >
         <button
           className="absolute top-0 left-[22rem] lg:hidden"

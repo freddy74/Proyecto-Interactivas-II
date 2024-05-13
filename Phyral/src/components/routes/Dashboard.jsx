@@ -30,7 +30,7 @@ export function Dashboard() {
         </div>
 
         <div className="flex flex-col mt-5 gap-4 col-span-4 xl:col-auto">
-          <Calendar />
+
           <GeneralStats />
         </div>
       </section>
