@@ -9,7 +9,7 @@ export function Profile() {
   return (
     <div className="flex justify-end">
       <Sidebar username="Freddy Garro" />
-      <div className="flex flex-col md:w-[75%] w-[100vw] p-[40px] gap-[20px] items-center justify-center">
+      <div className="flex flex-col w-[80vw] max-sm:w-[100vw] max-md:w-[100vw] max-lg:w-[100vw] p-[40px] gap-[20px] items-center justify-center">
         <MainInfo
           username="Freddy Garro Masis"
           profileImg="https://unavatar.io/freddy74"

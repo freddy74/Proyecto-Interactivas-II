@@ -19,6 +19,7 @@ import { Profile } from "./components/routes/Profile.jsx";
 import { Events } from "./components/routes/Events.jsx";
 import { CourseProgress } from "./components/CourseProgress.jsx";
 import { Overview } from "./components/routes/Overview.jsx";
+import { NewDashboard } from "./components/routes/NewDasboard.jsx";
 
 
 export function App() {
