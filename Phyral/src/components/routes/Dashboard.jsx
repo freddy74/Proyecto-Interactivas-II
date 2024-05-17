@@ -10,9 +10,9 @@ import "../../index.css";
 
 export function Dashboard() {
   return (
-    <div className="flex justify-end w-[75%]">
+    <div className="flex justify-end">
       <Sidebar username="Freddy Garro" />
-      <section className="grid grid-cols-1 xl:grid-cols-4 lg:ml-[3rem] mx-4 xl:gap-6">
+      <section className="grid grid-cols-1 xl:grid-cols-4 lg:ml-[20rem] mx-4 xl:gap-6">
         <div className="grid mt-5 col-span-3 lg:col-span-3">
           <Welcome username="Freddy" />
 

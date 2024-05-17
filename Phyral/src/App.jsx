@@ -14,13 +14,12 @@ import { PersonalInfo } from "./components/profile/PersonalInfo.jsx";
 import { AdditionalInfo } from "./components/profile/AdditionalInfo.jsx";
 import { GeneralStats } from "./components/dashboard/GeneralStats.jsx";
 import { EventsDetailsPopup } from "./components/events/EventDetailsPopup.jsx";
-import { EventCard } from "./components/events/EventCard.jsx";
-import { Search } from "./components/navigation/Search.jsx";
-import { Filter } from "./components/navigation/Filter.jsx";
 import { Dashboard } from "./components/routes/Dashboard.jsx";
 import { Profile } from "./components/routes/Profile.jsx";
 import { Events } from "./components/routes/Events.jsx";
-import { NewDashboard } from "./components/routes/NewDasboard.jsx";
+import { CourseProgress } from "./components/CourseProgress.jsx";
+import { Overview } from "./components/routes/Overview.jsx";
+
 
 export function App() {
   return (
@@ -31,9 +30,8 @@ export function App() {
         <Route path="/events" element={<Events />} />
         <Route path="/newdashboard" element={<NewDashboard />} />
         <Route path="*" element={<Navigate to="/" />} />
+        <Route path="/overview" element={<Overview />} />
       </Routes>
-
-      
 
       {/* <div>
             <EventsDetailsPopup
@@ -49,8 +47,6 @@ export function App() {
             
             <Sidebar username="Freddy Garro"/>
         </div>     */}
-
-      
     </>
   );
 }
