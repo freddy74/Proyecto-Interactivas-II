@@ -17,9 +17,9 @@ import { EventsDetailsPopup } from "./components/events/EventDetailsPopup.jsx";
 import { Dashboard } from "./components/routes/Dashboard.jsx";
 import { Profile } from "./components/routes/Profile.jsx";
 import { Events } from "./components/routes/Events.jsx";
-import { CourseProgress } from "./components/CourseProgress.jsx";
+// import { CourseProgress } from "./components/CourseProgress.jsx";
 import { Overview } from "./components/routes/Overview.jsx";
-import { NewDashboard } from "./components/routes/NewDasboard.jsx";
+// import { NewDashboard } from "./components/routes/NewDasboard.jsx";
 
 
 export function App() {
@@ -29,7 +29,7 @@ export function App() {
         <Route path="/" element={<Dashboard />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/events" element={<Events />} />
-        <Route path="/newdashboard" element={<NewDashboard />} />
+        {/* <Route path="/newdashboard" element={<NewDashboard />} /> */}
         <Route path="*" element={<Navigate to="/" />} />
         <Route path="/overview" element={<Overview />} />
       </Routes>
