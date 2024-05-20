@@ -20,6 +20,7 @@ import { Events } from "./components/routes/Events.jsx";
 import { CourseProgress } from "./components/CourseProgress.jsx";
 import { Overview } from "./components/routes/Overview.jsx";
 import { NewDashboard } from "./components/routes/NewDasboard.jsx";
+import { Form } from "./components/Form.jsx";
 
 
 export function App() {
@@ -32,6 +33,7 @@ export function App() {
         <Route path="/newdashboard" element={<NewDashboard />} />
         <Route path="*" element={<Navigate to="/" />} />
         <Route path="/overview" element={<Overview />} />
+        <Route path="/form" element={<Form />} />
       </Routes>
 
       {/* <div>
