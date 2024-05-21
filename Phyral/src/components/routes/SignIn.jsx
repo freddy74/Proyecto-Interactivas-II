@@ -1,81 +1,83 @@
-import "../index.css";
+import "../../index.css";
 // import backgroundImage from "../assets/imgs/signinbg.jpg";
-import logo from "../assets/imgs/logo.jpg";
-import { SimpleButton } from "./SimpleButton.jsx";
+import logo from "../../assets/imgs/logo.jpg";
+import { SimpleButton } from "../SimpleButton.jsx";
 import React from "react";
 
 export function SignIn() {
   return (
-    <div className="bg-[url('./assets/imgs/signinbg.jpg')] justify-center flex-wrap  gap-60 bg-cover bg-no-repeat bg-center flex items-center min-h-screen">
-      <div className="  rounded-3xl bg-white p-12 grid items-center justify-center" >
-        <img className="m-auto pb-10 " src={logo} alt="logo" />
+    <div className="bg-white min-h-screen flex w-screen">
+      <div className=" bg-white  items-center justify-center w-full max-w-screen-md max-h-screen-md mx-6" >
+        <img className="m-auto pb-14 pt-16 " src={logo} alt="logo" />
+        <div className="mx-12 my-0">
+          <h2 className="text-3xl font-main font-bold pb-7">Sign In</h2>
 
-        <h2 className="text-3xl font-main font-bold pb-7">Sign In</h2>
+          <form className="grid align-center gap-4 ">
+            <label className="text-xs text-custom-dark font-medium opacity-[80%]">Name:</label>
+            <input
+              className=" bg-[#F5F5FB] w-[16rem] border-2 border-[#A8B0FF]  "
+              type="text"
+              placeholder=""
+            />
 
-        <form className="w-[18rem] grid align-center gap-4 md:w-[20rem]">
-          <label className="text-xs text-custom-dark font-medium">Name:</label>
-          <input
-            className="bg-background-main rounded-[4px]"
-            type="text"
-            placeholder=""
-          />
+            <label className="text-xs text-custom-dark font-medium opacity-[80%]">
+              Lastname:
+            </label>
+            <input
+              className=" bg-[#F5F5FB] w-[16rem] border-2 border-[#A8B0FF] "
+              type="text"
+              placeholder=""
+            />
 
-          <label className="text-xs text-custom-dark font-medium">
-            Lastname:
-          </label>
-          <input
-            className=" bg-background-main rounded-[4px]"
-            type="text"
-            placeholder=""
-          />
+            <label className="text-xs text-custom-dark font-medium opacity-[80%]">
+              Username:
+            </label>
+            <input
+              className="  bg-[#F5F5FB] w-[16rem] border-2 border-[#A8B0FF]  "
+              type="text"
+              placeholder=""
+            />
 
-          <label className="text-xs text-custom-dark font-medium">
-            Username:
-          </label>
-          <input
-            className=" bg-background-main rounded-[4px]"
-            type="text"
-            placeholder=""
-          />
+            <label className="text-xs text-custom-dark font-medium opacity-[80%]">
+              Password:
+            </label>
+            <input
+              className="  bg-[#F5F5FB] w-[16rem] border-2 border-[#A8B0FF] "
+              type="text"
+              placeholder=""
+            />
 
-          <label className="text-xs text-custom-dark font-medium">
-            Password:
-          </label>
-          <input
-            className=" bg-background-main rounded-[4px]"
-            type="text"
-            placeholder=""
-          />
+            <label className="text-xs text-custom-dark font-medium opacity-[80%]">
+              Confirm Password:
+            </label>
+            <input
+              className="  bg-[#F5F5FB] w-[16rem] border-2 border-[#A8B0FF]  "
+              type="text"
+              placeholder=""
+            />
+          </form>
 
-          <label className="text-xs text-custom-dark font-medium">
-            Confirm Password:
-          </label>
-          <input
-            className=" bg-background-main rounded-[4px]"
-            type="text"
-            placeholder=""
-          />
-        </form>
-
-        <div className="grid gap-4 mt-7">
-          <SimpleButton href="{#}" name="Sign In" />
-          <a className="font-main underline font-semibold text-[#0D0D0D] opacity-50 hover:opacity-100 text-sm " href="{#}">
-            Have an account?
-          </a>
+          <div className="grid gap-4 mt-7">
+            <SimpleButton  href="{#}" name="Sign In" />
+            <a className="font-main underline font-semibold text-[#0D0D0D] opacity-50 hover:opacity-100 text-sm " href="{#}">
+              Have an account?
+            </a>
+          </div>
         </div>
       </div>
-<div>
-<div className="space-y-10 w-[18rem] grid justify-center">
-  <h2 className="text-custom-dark text-9xl hidden font-bold sm:block">Discover Phyral universe</h2>
-  <p className="text-base hidden sm:block">Lorem ipsum dolor sit amet consectetur. Nibh volutpat elementum massa
-    sollicitudin varius rhoncus sapien. Blandit ipsum eget tempor diam nunc tincidunt nunc 
-    et. At blandit condimentum at tortor orci vulputate tincidunt tellus eros. Et blandit adipiscing vitae enim eget. Et adipiscing non arcu non
-    eget. Dui porta fermentum lacus.
-  </p>
-</div>
-</div>
+      <div>
+        <div className="bg-[url('./assets/imgs/signinbg.jpg')]  bg-cover h-screen grid p-12">
+          <h2 className="text-custom-dark text-9xl hidden font-extrabold sm:block mx-10 my-10">Discover Phyral universe</h2>
+          <p className="text-base hidden sm:block font-extrabold mx-10 my-10">Lorem ipsum dolor sit amet consectetur. Nibh volutpat elementum massa
+            sollicitudin varius rhoncus sapien. Blandit ipsum eget tempor diam nunc tincidunt nunc
+            et. At blandit condimentum at tortor orci vulputate tincidunt tellus eros. Et blandit adipiscing vitae enim eget. Et adipiscing non arcu non
+            eget. Dui porta fermentum lacus.
+          </p>
+        </div>
+      </div>
 
     </div>
+
 
   );
 }

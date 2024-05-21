@@ -20,6 +20,8 @@ import { Events } from "./components/routes/Events.jsx";
 import { CourseProgress } from "./components/CourseProgress.jsx";
 import { Overview } from "./components/routes/Overview.jsx";
 import { NewDashboard } from "./components/routes/NewDasboard.jsx";
+import { SignIn } from "./components/routes/SignIn.jsx";
+import { LogIn } from "./components/routes/Login.jsx";
 
 
 export function App() {
@@ -32,6 +34,8 @@ export function App() {
         <Route path="/newdashboard" element={<NewDashboard />} />
         <Route path="*" element={<Navigate to="/" />} />
         <Route path="/overview" element={<Overview />} />
+        <Route path="/signin" element={<SignIn />} />
+        <Route path="/login" element={<LogIn />} />
       </Routes>
 
       {/* <div>
