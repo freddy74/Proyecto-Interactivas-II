@@ -7,13 +7,15 @@ import { Calendar } from "../dashboard/Calendar";
 import { GeneralStats } from "../dashboard/GeneralStats";
 
 import "../../index.css";
+import { EventCard } from "../events/EventCard";
 
 export function Dashboard() {
   return (
     <div className="flex justify-end">
       <Sidebar username="Freddy Garro" />
-      <section className="grid grid-cols-1 xl:grid-cols-4 lg:ml-[20rem] mx-4 xl:gap-6">
-        <div className="grid mt-5 col-span-3 lg:col-span-3">
+
+      <section className="grid grid-cols-1 xl:grid-cols-4 lg:ml-[20rem] mx-4 xl:gap-6 mt-[80px]">
+        <div className="grid mt-5 max-lg:mt-20 col-span-3 lg:col-span-3">
           <Welcome username="Freddy" />
 
           <section className="w-full mt-5 overflow-hidden">
@@ -25,12 +27,25 @@ export function Dashboard() {
             <h3 className="text-2xl font-secondary font-bold mb-5">
               For Today
             </h3>
-            <HorizontalCard title="React Homework" course="Web Development" />
+            <div className="grid gap-4 minmax-200 mb-5">
+              <EventCard
+                taskImg="https://kinsta.com/wp-content/uploads/2022/01/tailwind-css.jpg"
+                eventName="React’s homework"
+                description="Lorem ipsum dolor sit amet consectetur. Ut euismod venenatis nisi feugiat eleifend ultrices purus penatibus nibh."
+                category="Web Development"
+              />
+              <EventCard
+                taskImg="https://kinsta.com/wp-content/uploads/2022/01/tailwind-css.jpg"
+                eventName="React’s homework"
+                description="Lorem ipsum dolor sit amet consectetur. Ut euismod venenatis nisi feugiat eleifend ultrices purus penatibus nibh."
+                category="Web Development"
+              />
+            </div>
           </section>
         </div>
 
         <div className="flex flex-col mt-5 gap-4 col-span-4 xl:col-auto">
-
+          <Calendar />
           <GeneralStats />
         </div>
       </section>

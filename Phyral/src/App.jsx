@@ -17,10 +17,14 @@ import { EventsDetailsPopup } from "./components/events/EventDetailsPopup.jsx";
 import { Dashboard } from "./components/routes/Dashboard.jsx";
 import { Profile } from "./components/routes/Profile.jsx";
 import { Events } from "./components/routes/Events.jsx";
-import { CourseProgress } from "./components/CourseProgress.jsx";
+// import { CourseProgress } from "./components/CourseProgress.jsx";
 import { Overview } from "./components/routes/Overview.jsx";
+<<<<<<< HEAD
 import { NewDashboard } from "./components/routes/NewDasboard.jsx";
 import { Form } from "./components/Form.jsx";
+=======
+// import { NewDashboard } from "./components/routes/NewDasboard.jsx";
+>>>>>>> b93359653731af0c9d243233b8b30d48f9f78266
 
 
 export function App() {
@@ -30,7 +34,7 @@ export function App() {
         <Route path="/" element={<Dashboard />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/events" element={<Events />} />
-        <Route path="/newdashboard" element={<NewDashboard />} />
+        {/* <Route path="/newdashboard" element={<NewDashboard />} /> */}
         <Route path="*" element={<Navigate to="/" />} />
         <Route path="/overview" element={<Overview />} />
         <Route path="/form" element={<Form />} />
