@@ -19,12 +19,12 @@ import { Profile } from "./components/routes/Profile.jsx";
 import { Events } from "./components/routes/Events.jsx";
 // import { CourseProgress } from "./components/CourseProgress.jsx";
 import { Overview } from "./components/routes/Overview.jsx";
-<<<<<<< HEAD
+//<<<<<<< HEAD
 import { NewDashboard } from "./components/routes/NewDasboard.jsx";
 import { Form } from "./components/Form.jsx";
-=======
+//=======
 // import { NewDashboard } from "./components/routes/NewDasboard.jsx";
->>>>>>> b93359653731af0c9d243233b8b30d48f9f78266
+//>>>>>>> b93359653731af0c9d243233b8b30d48f9f78266
 
 
 export function App() {
