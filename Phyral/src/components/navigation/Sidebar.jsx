@@ -266,9 +266,9 @@ export function Sidebar({ username }) {
               Courses
             </a>
 
-            <a
+            <NavLink
+              to="/form"
               className="flex gap-[10px] px-[20px] py-[10px] hover:bg-white/10 hover:rounded-[10px]"
-              href=""
             >
               <svg
                 width="24"
@@ -290,7 +290,7 @@ export function Sidebar({ username }) {
                 </defs>
               </svg>
               Settings
-            </a>
+            </NavLink>
           </div>
         </div>
 
