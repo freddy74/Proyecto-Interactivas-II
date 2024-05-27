@@ -8,6 +8,8 @@ import { Overview } from "./components/routes/Overview.jsx";
 import { NewDashboard } from "./components/routes/NewDasboard.jsx";
 import { Form } from "./components/routes/Form.jsx";
 
+import { EventDetailsPopup } from "./components/events/EventDetailsPopup.jsx";
+
 
 export function App() {
   return (
