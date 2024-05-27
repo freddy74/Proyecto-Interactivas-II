@@ -11,7 +11,9 @@ export function Overview() {
       <Sidebar username="Freddy Garro" />
       <div className="text-custom-dark grid mx-4 lg:ml-[20rem] max-sm:mt-16">
         <section className="mb-5">
-          <h1 className="text-custom-dark font-secondary font-black text-[40px]">Overview</h1>
+          <h1 className="text-custom-dark font-secondary font-black text-[40px]">
+            Overview
+          </h1>
           <div className="flex justify-between items-center my-6">
             <Filter />
             <Search />
