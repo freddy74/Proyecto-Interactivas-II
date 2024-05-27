@@ -4,7 +4,7 @@ import { EditButton } from '../navigation/EditButton';
 export function AdditionalInfo({ hours, diseases, sports }) {
     return (
         <>
-            <div className='lg:w-[65rem] md:w-[65rem] w-[90vw] md:p-[60px] p-[20px] md:gap-[40px] gap-[20px] flex flex-col items-start rounded-2xl font-main border-solid border-[0.5px] border-custom-blue border-opacity-50 bg-white relative'>
+            <div className='w-full  md:p-[60px] p-[20px] md:gap-[40px] gap-[20px] flex flex-col items-start rounded-2xl font-main border-solid border-[0.5px] border-custom-blue border-opacity-50 bg-white relative'>
                 {/* Título y botón de edición */}
                 <div className='w-full flex justify-between items-center text-custom-dark'>
                     <h1 className='text-2xl md:text-4xl font-secondary font-bold'>Additional Information</h1>

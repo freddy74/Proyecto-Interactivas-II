@@ -4,7 +4,7 @@ import { EditButton } from '../navigation/EditButton';
 export function MainInfo({ username, profileImg, location, occupation }) {
     return (
         <>
-            <div className='lg:w-[65rem] md:w-[65rem] w-[90vw] md:p-[60px] p-[20px] flex flex-col md-flex-row items-start rounded-2xl font-main border-solid border-[0.5px] border-custom-blue border-opacity-50 bg-white relative'>
+            <div className='w-full md:p-[60px] p-[20px] flex flex-col md-flex-row items-start rounded-2xl font-main border-solid border-[0.5px] border-custom-blue border-opacity-50 bg-white relative'>
 
                 <div className='flex max-sm:flex-col flex-row md:gap-[40px] gap-[20px] justify-between text-custom-dark '> {/**profile content */}
 
