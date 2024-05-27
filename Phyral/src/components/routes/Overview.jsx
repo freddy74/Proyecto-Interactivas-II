@@ -1,4 +1,3 @@
-import "../../index.css";
 import { CourseProgress } from "../overview/CourseProgress";
 import { TaskDone } from "../overview/TaskDone";
 import { Sidebar } from "../navigation/Sidebar";
@@ -9,8 +8,8 @@ export function Overview() {
   return (
     <>
       <Sidebar username="Freddy Garro" />
-      <div className="text-custom-dark grid mx-4 lg:ml-[20rem] max-sm:mt-16">
-        <section className="mb-5">
+      <div className="text-custom-dark grid mx-4 lg:ml-[20rem]">
+        <section className="mb-5 max-lg:mt-28">
           <h1 className="text-custom-dark font-secondary font-black text-[40px]">
             Overview
           </h1>
@@ -43,7 +42,7 @@ export function Overview() {
         </section>
 
         <section className="mb-5">
-          <h1 className="text-2xl font-secondary font-bold mb-5">
+          <h1 className="text-2xl font-main font-bold mt-8 mb-4">
             Completed Today
           </h1>
           <div className="flex flex-wrap gap-6">
@@ -66,7 +65,7 @@ export function Overview() {
         </section>
 
         <section className="mb-5">
-          <h1 className="text-2xl font-secondary font-bold mb-5">
+          <h1 className="text-2xl font-main font-bold mt-8 mb-4">
             Completed in the Week
           </h1>
           <div className="flex flex-wrap gap-6">

@@ -17,12 +17,12 @@ export function Dashboard() {
           <Welcome username="Freddy" />
 
           <section className="w-full mt-5 overflow-hidden">
-            <h3 className="text-2xl font-secondary font-bold mb-5">Courses</h3>
+            <h3 className="text-2xl font-main font-bold mb-3 mt-5">Courses</h3>
             <Slider />
           </section>
 
           <section className="h-fit mt-5">
-            <h3 className="text-2xl font-secondary font-bold mb-5">
+            <h3 className="text-2xl font-main font-bold mb-3 mt-5">
               For Today
             </h3>
             <div className="grid gap-4 minmax-200 mb-5">
