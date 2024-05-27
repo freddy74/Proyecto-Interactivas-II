@@ -1,6 +1,6 @@
 import '../../index.css';
 
-export function EventsDetailsPopup({ eventName, course, date, category, status, description, eventImg }) {
+export function EventDetailsPopup({ eventName, course, date, category, status, description, eventImg }) {
     return (
         <>
             <div className='flex justify-center items-center fixed  top-0 bottom-0 w-[100vw] h-[100vh] bg-[rgba(0,0,0,0.5)] z-[999] text-custom-dark font-main'>
