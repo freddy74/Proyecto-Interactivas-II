@@ -25,32 +25,52 @@ export function Form() {
 
     const handleDiabetesChange = () => {
       setDiabetesChecked(!diabetesChecked);
+      if (!diabetesChecked && noneChecked) {
+        setNoneChecked(false);
+      }
     };
 
     const handleHypertensionChange = () => {
       setHypertensionChecked(!hypertensionChecked);
+      if (!hypertensionChecked && noneChecked) {
+        setNoneChecked(false);
+      }
     };
 
     const handdleAnxietyChange = () => {
       setAnxietyChecked(!anxietyChecked);
+      if (!anxietyChecked && noneChecked) {
+        setNoneChecked(false);
+      }
     };
 
     const handdleAsthmaChange = () => {
       setAsthmaChecked(!asthmaChecked);
+      if (!asthmaChecked && noneChecked) {
+        setNoneChecked(false);
+      }
     };
 
     const handdleObesityChange = () => {
       setObesityChecked(!obesityChecked);
+      if (!obesityChecked && noneChecked) {
+        setNoneChecked(false);
+      }
     };
 
     const handdleNoneChange = () => {
       setNoneChecked(!noneChecked);
+      setAnxietyChecked(false);
+      setAsthmaChecked(false);
+      setObesityChecked(false);
+      setDiabetesChecked(false);
+      setHypertensionChecked(false);
     };
 
     return (
       <div className="flex justify-end max-sm:justify-center">
         <Sidebar username="Freddy Garro" />
-        <div className=" min-h-screen flex items-center justify-center w-[80vw] max-sm:w-[90vw] p-[40px] max-sm:p-[20px] max-sm:mt-[80px]">
+        <div className=" min-h-screen flex items-center justify-center w-[80vw] max-sm:w-[95vw] p-[40px] max-sm:p-[20px] max-sm:mt-[80px]">
           <div className="w-[50%] max-sm:w-[100%] h-[85vh] bg-white rounded-2xl p-[40px] max-sm:p-[20px] border-solid border-custom-blue border-[0.5px] border-opacity-50">
             <h2 className="font-secondary font-bold text-[40px] max-sm:text-[30px] text-custom-dark mb-[20px]">
               General information
