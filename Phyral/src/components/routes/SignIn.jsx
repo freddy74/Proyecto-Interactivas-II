@@ -1,83 +1,71 @@
 import "../../index.css";
-// import backgroundImage from "../assets/imgs/signinbg.jpg";
 import logo from "../../assets/imgs/logo.jpg";
 import { SimpleButton } from "../SimpleButton.jsx";
+import { Input } from "../registration/Input.jsx";
 import React from "react";
 
 export function SignIn() {
   return (
-    <div className="bg-white min-h-screen flex w-screen">
-      <div className=" bg-white  items-center justify-center w-full max-w-screen-md max-h-screen-md mx-6" >
-        <img className="m-auto pb-14 pt-16 " src={logo} alt="logo" />
-        <div className="mx-12 my-0">
-          <h2 className="text-3xl font-main font-bold pb-7">Sign In</h2>
-
-          <form className="grid align-center gap-4 ">
-            <label className="text-xs text-custom-dark font-medium opacity-[80%]">Name:</label>
-            <input
-              className=" bg-[#F5F5FB] w-[16rem] border-2 border-[#A8B0FF]  "
-              type="text"
-              placeholder=""
-            />
-
-            <label className="text-xs text-custom-dark font-medium opacity-[80%]">
-              Lastname:
-            </label>
-            <input
-              className=" bg-[#F5F5FB] w-[16rem] border-2 border-[#A8B0FF] "
-              type="text"
-              placeholder=""
-            />
-
-            <label className="text-xs text-custom-dark font-medium opacity-[80%]">
-              Username:
-            </label>
-            <input
-              className="  bg-[#F5F5FB] w-[16rem] border-2 border-[#A8B0FF]  "
-              type="text"
-              placeholder=""
-            />
-
-            <label className="text-xs text-custom-dark font-medium opacity-[80%]">
-              Password:
-            </label>
-            <input
-              className="  bg-[#F5F5FB] w-[16rem] border-2 border-[#A8B0FF] "
-              type="text"
-              placeholder=""
-            />
-
-            <label className="text-xs text-custom-dark font-medium opacity-[80%]">
-              Confirm Password:
-            </label>
-            <input
-              className="  bg-[#F5F5FB] w-[16rem] border-2 border-[#A8B0FF]  "
-              type="text"
-              placeholder=""
-            />
-          </form>
-
-          <div className="grid gap-4 mt-7">
-            <SimpleButton  href="{#}" name="Sign In" />
-            <a className="font-main underline font-semibold text-[#0D0D0D] opacity-50 hover:opacity-100 text-sm " href="{#}">
-              Have an account?
-            </a>
-          </div>
-        </div>
-      </div>
-      <div>
-        <div className="bg-[url('./assets/imgs/signinbg.jpg')]  bg-cover h-screen grid p-12">
-          <h2 className="text-custom-dark text-9xl hidden font-extrabold sm:block mx-10 my-10">Discover Phyral universe</h2>
-          <p className="text-base hidden sm:block font-extrabold mx-10 my-10">Lorem ipsum dolor sit amet consectetur. Nibh volutpat elementum massa
-            sollicitudin varius rhoncus sapien. Blandit ipsum eget tempor diam nunc tincidunt nunc
-            et. At blandit condimentum at tortor orci vulputate tincidunt tellus eros. Et blandit adipiscing vitae enim eget. Et adipiscing non arcu non
-            eget. Dui porta fermentum lacus.
+    <div className="bg-white flex flex-row-reverse max-lg:flex-col">
+      <div className="bg-[url('./assets/imgs/signinbg.jpg')] bg-cover h-screen w-[60%] flex flex-col justify-center gap-6 max-lg:hidden">
+        <section className="p-20">
+          <h2 className="text-custom-dark font-secondary text-9xl hidden font-bold sm:block">
+            Discover Phyral Universe
+          </h2>
+          <p className="text-base hidden sm:block font-semibold">
+            Lorem ipsum dolor sit amet consectetur. Nibh volutpat elementum
+            massa sollicitudin varius rhoncus sapien. Blandit ipsum eget tempor
+            diam nunc tincidunt nunc et. At blandit condimentum at tortor orci
+            vulputate tincidunt tellus eros. Et blandit adipiscing vitae enim
+            eget. Et adipiscing non arcu non eget. Dui porta fermentum lacus.
           </p>
-        </div>
+        </section>
       </div>
 
+      <div className=" bg-white items-center justify-center lg:w-[40%] w-full h-screen">
+        <img className="m-[4rem_auto]" src={logo} alt="logo" />
+        <h2 className="text-3xl font-main font-bold pb-7 text-center text-custom-dark">
+          Sign In
+        </h2>
+
+        <form className="grid align-center gap-4 w-[50%] m-auto max-lg:w-[80%]">
+          <label className="text-xs text-custom-dark font-medium opacity-80">
+            name
+          </label>
+          <Input name="name" />
+
+          <label className="text-xs text-custom-dark font-medium opacity-80">
+            last name
+          </label>
+          <Input name="lastname" />
+
+          <label className="text-xs text-custom-dark font-medium opacity-80">
+            username
+          </label>
+          <Input name="username" />
+
+          <label className="text-xs text-custom-dark font-medium opacity-80">
+            password
+          </label>
+          <Input name="password" type="password" />
+
+          <label className="text-xs text-custom-dark font-medium opacity-80">
+            confirm password
+          </label>
+          <Input name="password" type="password" />
+        </form>
+
+        <div className="grid gap-4 mt-16 justify-items-center">
+          <SimpleButton href="{#}" name="Sign In" />
+
+          <a
+            className="font-main underline font-semibold text-custom-dark opacity-50 hover:opacity-100 text-sm"
+            href="{#}"
+          >
+            Already registered
+          </a>
+        </div>
+      </div>
     </div>
-
-
   );
 }
