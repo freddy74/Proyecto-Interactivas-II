@@ -53,9 +53,9 @@ export function Sidebar({ username }) {
             <LogoIcon width="60px" height="60px" />
             <LogoTextIcon />
           </div>
-          <div className="flex bg-white/10 rounded-[50px] p-[10px] gap-[20px] items-center">
+          <div className="flex bg-white/10 rounded-[50px] p-[10px] pr-[20px] gap-[20px] items-center">
             <img
-              className="rounded-[50%] w-[5rem] h-[5rem]"
+              className="rounded-[50%] w-[60px] h-[60px]"
               src="https://unavatar.io/freddy74"
               alt="User Profile"
             />
