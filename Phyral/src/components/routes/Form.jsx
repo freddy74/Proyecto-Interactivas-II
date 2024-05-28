@@ -4,12 +4,32 @@ import { Sidebar } from "../navigation/Sidebar";
 import { HealthIcon } from "../../assets/icons/HealthIcon";
 import { SleepIcon } from "../../assets/icons/SleepIcon";
 import { GymIcon } from "../../assets/icons/GymIcon";
+import { WarningIcon } from "../../assets/icons/WarningIcon";
 
 export function Form() {
   const PasoFormulario = () => {
     const [paso, setPaso] = useState(1);
 
+    const hideWarning = () => {
+      let options = document.getElementById("options");
+      let warning = document.getElementById("warning");
+
+      warning.style.display = "none";
+    }
+
     const nextStep = () => {
+
+      let options = document.getElementById("options");
+      let warning = document.getElementById("warning");
+
+      if (
+        paso === 1 &&
+        options.value === "option1"
+      ) {
+        //alert("Por favor seleccione una respuesta");
+        warning.style.display = "flex";
+        return;
+      }
       setPaso(paso + 1);
     };
 
@@ -114,10 +134,10 @@ export function Form() {
     };
 
     return (
-      <div className="flex justify-end max-sm:justify-center">
+      <div className="flex justify-end max-lg:justify-center">
         <Sidebar username="Freddy Garro" />
-        <div className=" min-h-screen flex items-center justify-center md:w-[80vw] max-sm:w-[95vw] lg:w-[75vw] p-[40px] max-sm:p-[20px] max-sm:mt-[80px]  ">
-          <div className="w-[50%] max-sm:w-[100%] h-[85vh] bg-white rounded-2xl p-[40px] max-sm:p-[20px] border-solid border-custom-blue border-[0.5px] border-opacity-50">
+        <div className=" min-h-screen flex max-sm:items-start items-center justify-center max-lg:w-[90vw] md:w-[80vw] max-sm:w-[95vw] lg:w-[75vw] p-[40px] max-sm:p-[20px] max-sm:mt-[80px]  ">
+          <div className="w-[50%] max-lg:w-[90vw] max-sm:w-[100%] min-h-[500px] bg-white rounded-2xl p-[40px] max-sm:p-[20px] border-solid border-custom-blue border-[0.5px] border-opacity-50 max-sm:mt-[40px]">
             <h2 className="font-secondary font-bold text-[40px] max-sm:text-[30px] text-custom-dark mb-[20px]">
               General information
             </h2>
@@ -129,65 +149,74 @@ export function Form() {
               <PasoNumero paso={3} actual={paso} />
             </div>
             {paso === 1 && (
-              <div className="flex flex-col gap-[20px]">
-                <div className="flex flex-row gap-[10px] items-center">
-                  <SleepIcon />
-                  <label
-                    className="font-main text-[24px] font-semibold text-custom-dark"
-                    for="opciones"
+              <form action="" method="">
+                <div className="flex flex-col gap-[20px]">
+                  <div className="flex flex-row gap-[10px] items-center">
+                    <SleepIcon />
+                    <label
+                      className="font-main text-[24px] font-semibold text-custom-dark"
+                      for="opciones"
+                    >
+                      Hours of sleep
+                    </label>
+                  </div>
+                  <select
+                    onChange={hideWarning}
+                    className="font-main font-light text-custom-dark w-full border-solid border-custom-blue border-[0.5px] border-opacity-50 py-[10px] outline-none rounded-md px-[10px]"
+                    id="options"
+                    name="options"
                   >
-                    Hours of sleep
-                  </label>
-                </div>
-                <select
-                  className="font-main font-light text-custom-dark w-full border-solid border-custom-blue border-[0.5px] border-opacity-50 py-[10px] outline-none rounded-md px-[10px]"
-                  id="opciones"
-                  name="opciones"
-                >
-                  <option
-                    className="font-main font-light text-custom-dark"
-                    value="option1"
-                    disabled
-                    selected
-                    hidden
-                  >
-                    Select an option
-                  </option>
+                    <option
+                      className="font-main font-light text-custom-dark"
+                      value="option1"
+                      disabled
+                      selected
+                      hidden
+                    >
+                      Select an option
+                    </option>
 
-                  <option
-                    className="font-main font-light text-custom-dark"
-                    value="option1"
-                  >
-                    Less than 6 hours
-                  </option>
-                  <option
-                    className="font-main font-light text-custom-dark"
-                    value="option2"
-                  >
-                    6 - 7 hours
-                  </option>
-                  <option
-                    className="font-main font-light text-custom-dark"
-                    value="option3"
-                  >
-                    7 - 8 hours
-                  </option>
-                  <option
-                    className="font-main font-light text-custom-dark"
-                    value="option4"
-                  >
-                    More than 8 hours
-                  </option>
-                </select>
-                <div className="flex ">
-                  <button
-                    className="text-[14px] font-main font-medium text-center bg-custom-blue text-white px-6 py-1 rounded-md hover:opacity-90 duration-300 transition-all shadow-[0_8px_28px_0_rgba(81,97,255,0.25)] btn"
-                    onClick={nextStep}
-                  >
-                    Next
-                  </button>
+                    <option
+                      className="font-main font-light text-custom-dark"
+                      value="option1"
+                    >
+                      Less than 6 hours
+                    </option>
+                    <option
+                      className="font-main font-light text-custom-dark"
+                      value="option2"
+                    >
+                      6 - 7 hours
+                    </option>
+                    <option
+                      className="font-main font-light text-custom-dark"
+                      value="option3"
+                    >
+                      7 - 8 hours
+                    </option>
+                    <option
+                      className="font-main font-light text-custom-dark"
+                      value="option4"
+                    >
+                      More than 8 hours
+                    </option>
+                  </select>
+                  <div id="warning" className="gap-[10px]  items-center bg-red-100 p-[10px] rounded-md hidden">
+                    <WarningIcon w="16px" h="16px" color="rgb(220 38 38"/>
+                    <p className="font-main font-light text-[14px] text-red-600">You must select an option to continue</p>
+                  </div>
+                  <div className="flex ">
+                    <button
+                      type="button"
+                      value="Next"
+                      className="text-[14px] font-main font-medium text-center bg-custom-blue text-white px-6 py-1 rounded-md hover:opacity-90 duration-300 transition-all shadow-[0_8px_28px_0_rgba(81,97,255,0.25)] btn"
+                      onClick={nextStep}
+                    >
+                      Next
+                    </button>
+                  </div>
                 </div>
-              </div>
+              </form>
             )}
 
             {paso === 2 && (
@@ -201,7 +230,6 @@ export function Form() {
                     Health problems
                   </label>
                 </div>
-
 
                 <fieldset className="space-y-2 grid grid-cols-2 grid-rows-3">
                   <div className="flex items-center font-main text-custom-dark font-light">
@@ -218,8 +246,9 @@ export function Form() {
                       className="flex items-center cursor-pointer"
                     >
                       <span
-                        className={`w-5 h-5 border border-custom-dark border-opacity-50 rounded mr-2 ${diabetesChecked ? "bg-custom-blue" : "bg-white"
-                          }`}
+                        className={`w-5 h-5 border border-custom-dark border-opacity-50 rounded mr-2 ${
+                          diabetesChecked ? "bg-custom-blue" : "bg-white"
+                        }`}
                       ></span>
                       Diabetes
                     </label>
@@ -239,8 +268,9 @@ export function Form() {
                       className="flex items-center cursor-pointer"
                     >
                       <span
-                        className={`w-5 h-5 border border-custom-dark border-opacity-50 rounded mr-2 ${hypertensionChecked ? "bg-custom-blue" : "bg-white"
-                          }`}
+                        className={`w-5 h-5 border border-custom-dark border-opacity-50 rounded mr-2 ${
+                          hypertensionChecked ? "bg-custom-blue" : "bg-white"
+                        }`}
                       ></span>
                       Hypertension
                     </label>
@@ -260,8 +290,9 @@ export function Form() {
                       className="flex items-center cursor-pointer"
                     >
                       <span
-                        className={`w-5 h-5 border border-custom-dark border-opacity-50 rounded mr-2 ${anxietyChecked ? "bg-custom-blue" : "bg-white"
-                          }`}
+                        className={`w-5 h-5 border border-custom-dark border-opacity-50 rounded mr-2 ${
+                          anxietyChecked ? "bg-custom-blue" : "bg-white"
+                        }`}
                       ></span>
                       Anxiety
                     </label>
@@ -281,8 +312,9 @@ export function Form() {
                       className="flex items-center cursor-pointer"
                     >
                       <span
-                        className={`w-5 h-5 border border-custom-dark border-opacity-50 rounded mr-2 ${asthmaChecked ? "bg-custom-blue" : "bg-white"
-                          }`}
+                        className={`w-5 h-5 border border-custom-dark border-opacity-50 rounded mr-2 ${
+                          asthmaChecked ? "bg-custom-blue" : "bg-white"
+                        }`}
                       ></span>
                       Asthma
                     </label>
@@ -302,8 +334,9 @@ export function Form() {
                       className="flex items-center cursor-pointer"
                     >
                       <span
-                        className={`w-5 h-5 border border-custom-dark border-opacity-50 rounded mr-2 ${obesityChecked ? "bg-custom-blue" : "bg-white"
-                          }`}
+                        className={`w-5 h-5 border border-custom-dark border-opacity-50 rounded mr-2 ${
+                          obesityChecked ? "bg-custom-blue" : "bg-white"
+                        }`}
                       ></span>
                       Obesity
                     </label>
@@ -323,8 +356,9 @@ export function Form() {
                       className="flex items-center cursor-pointer"
                     >
                       <span
-                        className={`w-5 h-5 border border-custom-dark border-opacity-50 rounded mr-2 ${noneChecked ? "bg-custom-blue" : "bg-white"
-                          }`}
+                        className={`w-5 h-5 border border-custom-dark border-opacity-50 rounded mr-2 ${
+                          noneChecked ? "bg-custom-blue" : "bg-white"
+                        }`}
                       ></span>
                       None
                     </label>
@@ -370,7 +404,6 @@ export function Form() {
                   </label>
                 </div>
 
-
                 <fieldset className="space-y-2 grid grid-cols-2 grid-rows-3">
                   <div className="flex items-center font-main text-custom-dark font-light">
                     <input
@@ -386,8 +419,9 @@ export function Form() {
                       className="flex items-center cursor-pointer"
                     >
                       <span
-                        className={`w-5 h-5 border border-custom-dark border-opacity-50 rounded mr-2 ${soccerChecked ? "bg-custom-blue" : "bg-white"
-                          }`}
+                        className={`w-5 h-5 border border-custom-dark border-opacity-50 rounded mr-2 ${
+                          soccerChecked ? "bg-custom-blue" : "bg-white"
+                        }`}
                       ></span>
                       Soccer
                     </label>
@@ -407,8 +441,9 @@ export function Form() {
                       className="flex items-center cursor-pointer"
                     >
                       <span
-                        className={`w-5 h-5 border border-custom-dark border-opacity-50 rounded mr-2 ${tennisChecked ? "bg-custom-blue" : "bg-white"
-                          }`}
+                        className={`w-5 h-5 border border-custom-dark border-opacity-50 rounded mr-2 ${
+                          tennisChecked ? "bg-custom-blue" : "bg-white"
+                        }`}
                       ></span>
                       Tennis
                     </label>
@@ -428,8 +463,9 @@ export function Form() {
                       className="flex items-center cursor-pointer"
                     >
                       <span
-                        className={`w-5 h-5 border border-custom-dark border-opacity-50 rounded mr-2 ${runningChecked ? "bg-custom-blue" : "bg-white"
-                          }`}
+                        className={`w-5 h-5 border border-custom-dark border-opacity-50 rounded mr-2 ${
+                          runningChecked ? "bg-custom-blue" : "bg-white"
+                        }`}
                       ></span>
                       Running
                     </label>
@@ -449,8 +485,9 @@ export function Form() {
                       className="flex items-center cursor-pointer"
                     >
                       <span
-                        className={`w-5 h-5 border border-custom-dark border-opacity-50 rounded mr-2 ${swimmingChecked ? "bg-custom-blue" : "bg-white"
-                          }`}
+                        className={`w-5 h-5 border border-custom-dark border-opacity-50 rounded mr-2 ${
+                          swimmingChecked ? "bg-custom-blue" : "bg-white"
+                        }`}
                       ></span>
                       Swimming
                     </label>
@@ -470,8 +507,9 @@ export function Form() {
                       className="flex items-center cursor-pointer"
                     >
                       <span
-                        className={`w-5 h-5 border border-custom-dark border-opacity-50 rounded mr-2 ${gymChecked ? "bg-custom-blue" : "bg-white"
-                          }`}
+                        className={`w-5 h-5 border border-custom-dark border-opacity-50 rounded mr-2 ${
+                          gymChecked ? "bg-custom-blue" : "bg-white"
+                        }`}
                       ></span>
                       Gym
                     </label>
@@ -491,8 +529,9 @@ export function Form() {
                       className="flex items-center cursor-pointer"
                     >
                       <span
-                        className={`w-5 h-5 border border-custom-dark border-opacity-50 rounded mr-2 ${noneChecked ? "bg-custom-blue" : "bg-white"
-                          }`}
+                        className={`w-5 h-5 border border-custom-dark border-opacity-50 rounded mr-2 ${
+                          noneChecked ? "bg-custom-blue" : "bg-white"
+                        }`}
                       ></span>
                       None
                     </label>
@@ -534,12 +573,13 @@ export function Form() {
     const pasoActivo = paso === actual;
     const pasoCompletado = paso < actual;
 
-    const clase = ` flex w-[30px] h-[30px] justify-center items-center p-[10px] rounded-md font-main  ${pasoActivo
-      ? "bg-custom-blue text-white shadow-[0_8px_28px_0_rgba(81,97,255,0.25)]"
-      : pasoCompletado
+    const clase = ` flex w-[30px] h-[30px] justify-center items-center p-[10px] rounded-md font-main  ${
+      pasoActivo
+        ? "bg-custom-blue text-white shadow-[0_8px_28px_0_rgba(81,97,255,0.25)]"
+        : pasoCompletado
         ? "text-custom-dark border-solid border-custom-blue border-[0.5px] border-opacity-50"
         : "text-custom-dark border-solid border-custom-blue border-[0.5px] border-opacity-50"
-      }`;
+    }`;
 
     return <div className={clase}>{paso}</div>;
   };
