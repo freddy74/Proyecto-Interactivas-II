@@ -39,7 +39,7 @@ export function Sidebar({ username }) {
 
       <aside
         className={`${isOpen ? "left-0" : "left-[-30rem]"
-          } bg-custom-blue w-[300px] fixed top-0 left-0 h-full grid gap-[30px] justify-center content-around font-main z-50 transition-all duration-500 lg:left-0`}
+          } bg-custom-blue w-[300px] rounded-tr-[3rem] fixed top-0 left-0 h-full grid gap-[30px] justify-center content-around font-main z-50 transition-all duration-500 lg:left-0`}
       >
         <button
           className="absolute top-0 left-[19rem] lg:hidden"
@@ -108,7 +108,7 @@ export function Sidebar({ username }) {
               to="/form"
               className="flex gap-[10px] px-[20px] py-[10px] hover:bg-white/10 hover:rounded-[10px]"
             >
-              <SettingsIcon />
+              <SettingsIcon w={26} h={26} color={"white"} />
               Settings
             </NavLink>
           </div>

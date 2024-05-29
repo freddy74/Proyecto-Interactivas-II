@@ -6,13 +6,16 @@ import { Calendar } from "../dashboard/Calendar";
 import { GeneralStats } from "../dashboard/GeneralStats";
 import { EventCard } from "../events/EventCard";
 import "../../index.css";
+import { NotificationsBar } from "../navigation/NotificationsBar";
 
 export function Dashboard() {
   return (
+    
     <div className="flex justify-end text-custom-dark">
+      <NotificationsBar notifications_amount="3"/>
       <Sidebar username="Freddy Garro" />
 
-      <section className="grid grid-cols-1 xl:grid-cols-4 lg:ml-[20rem]  mx-4 xl:gap-6 max-lg:mt-10">
+      <section className="grid grid-cols-1 xl:grid-cols-4 lg:ml-[20rem]  mx-4 xl:gap-6 max-lg:mt-10 mt-[80px]">
         <div className="grid mt-5 max-lg:mt-20 col-span-3 lg:col-span-3">
           <Welcome username="Freddy" />
 
