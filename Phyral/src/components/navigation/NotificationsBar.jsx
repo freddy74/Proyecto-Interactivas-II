@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { NotificationIcon } from '../../assets/icons/NotificationIcon';
 import { SettingsIcon } from '../../assets/icons/SettingsIcon';
+import { Notification } from '../navigation/Notification';
 import '../../index.css';
 import { CloseIcon } from "../../assets/icons/CloseIcon";
 
@@ -35,15 +36,12 @@ export function NotificationsBar({ notifications_amount }) {
 
                     <div className="flex flex-col gap-[10px] w-auto h-[200px] m-[20px]">
                         <h2 className="font-main font-medium text-[20px] text-white mb-[10px]">Notifications</h2>
-                        <div className="flex gap-[10px] items-center border-b-[1px] border-t-[1px] border-white border-opacity-10 py-[5px]">
-                            <img className="rounded-full w-[40px] h-[40px] object-cover border-solid border-white border-[2px] " src="https://kinsta.com/wp-content/uploads/2022/01/tailwind-css.jpg" alt="" />
-                            <div>
-                                <h3 className="font-main font-medium text-[16px] text-white">React's homework</h3>
-                                <p className="text-[14px] text-white font-main font-light">Lorem ipsum dolor sit amet</p>
-                            </div>
-                        </div>
+                        
+                        {/**SIMPLE NOTIFICATION */}
+                        <Notification notification_name={"Tailwindcss's homework"} notification_description={"Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet"} notification_img={"https://kinsta.com/wp-content/uploads/2022/01/tailwind-css.jpg"}/>
+                        <Notification notification_name={"React's homework"} notification_description={"Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet"} notification_img={"https://framerusercontent.com/images/N0xefN2fE6CCF4G2YhAg5exTHX8.png"}/>
+                        <Notification notification_name={"New course created"} notification_description={"Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet"} notification_img={"https://concepto.de/wp-content/uploads/2014/08/programacion-2-e1551291144973.jpg"}/>
                     </div>
-
                 </div>
             </div>
         </div>
