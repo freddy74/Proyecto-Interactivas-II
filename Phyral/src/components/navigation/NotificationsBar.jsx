@@ -24,7 +24,7 @@ export function NotificationsBar({ notifications_amount }) {
                     <NotificationIcon w={28} h={28} color="rgb(81 97 255)" />
                 </button>
 
-                <div className={`${isOpen ? "top-[40px]" : "top-[-600px]"} absolute right-0 w-[300px] top-[40px] h-[500px] bg-custom-blue rounded-xl transition-all duration-600`}>
+                <div className={`${isOpen ? "top-[40px]" : "top-[-600px]"} absolute right-0 w-[300px] h-[500px] bg-custom-blue rounded-xl transition-all duration-600`}>
 
                     <button
                         className="absolute top-3 right-3"
