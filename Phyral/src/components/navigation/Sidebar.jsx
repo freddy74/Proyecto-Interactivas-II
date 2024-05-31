@@ -49,7 +49,7 @@ export function Sidebar({ username }) {
         </button>
 
         <div className="flex flex-col gap-[40px]">
-          <div className="flex justify-center items-center gap-4">
+          <div className="flex justify-center items-center gap-4 mt-[40px]">
             <LogoIcon width="60px" height="60px" />
             <LogoTextIcon />
           </div>
