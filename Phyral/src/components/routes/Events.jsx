@@ -3,9 +3,28 @@ import { Sidebar } from "../navigation/Sidebar";
 import { EventCard } from "../events/EventCard";
 import { Search } from "../navigation/Search";
 import { Filter } from "../navigation/Filter";
+
+import { useFetchData } from "../hooks/useFetchData";
+
 import "../../index.css";
 
 export function Events() {
+
+  const { data } = useFetchData();
+
+  const createEvents = (items) => {
+    return items.map( item => <EventCard 
+        key={item.id}
+        taskImg={item.image}
+        eventName={item.title}
+        description={item.description}
+        category={item.category_name}
+        />)
+  }
+
+  //const events = data.events || [];
+
+
   return (
     <>
       <Sidebar username="Freddy Garro" />
@@ -19,47 +38,9 @@ export function Events() {
             <Search />
           </div>
           <div className="grid grid-cols-2 max-sm:grid-cols-1 gap-[20px] w-full">
-            <EventCard
-              taskImg="https://kinsta.com/wp-content/uploads/2022/01/tailwind-css.jpg"
-              eventName="React’s homework"
-              description="Lorem ipsum dolor sit amet consectetur. Ut euismod venenatis nisi feugiat eleifend ultrices purus penatibus nibh."
-              category="Web Development"
-            />
+            
+            { createEvents(data) }
 
-            <EventCard
-              taskImg="https://kinsta.com/wp-content/uploads/2022/01/tailwind-css.jpg"
-              eventName="React’s homework"
-              description="Lorem ipsum dolor sit amet consectetur. Ut euismod venenatis nisi feugiat eleifend ultrices purus penatibus nibh."
-              category="Web Development"
-            />
-
-            <EventCard
-              taskImg="https://kinsta.com/wp-content/uploads/2022/01/tailwind-css.jpg"
-              eventName="React’s homework"
-              description="Lorem ipsum dolor sit amet consectetur. Ut euismod venenatis nisi feugiat eleifend ultrices purus penatibus nibh."
-              category="Web Development"
-            />
-
-            <EventCard
-              taskImg="https://kinsta.com/wp-content/uploads/2022/01/tailwind-css.jpg"
-              eventName="React’s homework"
-              description="Lorem ipsum dolor sit amet consectetur. Ut euismod venenatis nisi feugiat eleifend ultrices purus penatibus nibh."
-              category="Web Development"
-            />
-
-            <EventCard
-              taskImg="https://kinsta.com/wp-content/uploads/2022/01/tailwind-css.jpg"
-              eventName="React’s homework"
-              description="Lorem ipsum dolor sit amet consectetur. Ut euismod venenatis nisi feugiat eleifend ultrices purus penatibus nibh."
-              category="Web Development"
-            />
-
-            <EventCard
-              taskImg="https://kinsta.com/wp-content/uploads/2022/01/tailwind-css.jpg"
-              eventName="React’s homework"
-              description="Lorem ipsum dolor sit amet consectetur. Ut euismod venenatis nisi feugiat eleifend ultrices purus penatibus nibh."
-              category="Web Development"
-            />
           </div>
         </div>
       </section>
