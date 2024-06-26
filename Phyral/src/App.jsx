@@ -7,8 +7,10 @@ import { Events } from "./components/routes/Events.jsx";
 import { Overview } from "./components/routes/Overview.jsx";
 import { NewDashboard } from "./components/routes/NewDasboard.jsx";
 import { Form } from "./components/routes/Form.jsx";
+import { Login } from "./components/registration/Login.jsx";
 
 import { EventDetailsPopup } from "./components/events/EventDetailsPopup.jsx";
+import { SignIn } from "./components/registration/SignIn.jsx";
 
 
 export function App() {
@@ -35,6 +37,8 @@ export function App() {
         <Route path="*" element={<Navigate to="/" />} />
         <Route path="/overview" element={<Overview />} />
         <Route path="/form" element={<Form />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/login" element={<SignIn />} />
       </Routes>
     </>
   );
