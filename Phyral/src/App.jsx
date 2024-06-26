@@ -38,7 +38,7 @@ export function App() {
         <Route path="/overview" element={<Overview />} />
         <Route path="/form" element={<Form />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/login" element={<SignIn />} />
+        <Route path="/signin" element={<SignIn />} />
       </Routes>
     </>
   );
