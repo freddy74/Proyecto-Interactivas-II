@@ -13,6 +13,7 @@ import { LogoTextIcon } from "../../assets/icons/LogoTextIcon";
 import { HamburgerIcon } from "../../assets/icons/HamburgerIcon";
 import { NotificationIcon } from "../../assets/icons/NotificationIcon";
 import { XIcon } from "../../assets/icons/XIcon";
+import { useAuth } from "../hooks/useAuth";
 
 export function Sidebar({ username }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -20,6 +21,11 @@ export function Sidebar({ username }) {
     setIsOpen(!isOpen);
     console.log(isOpen);
   }
+
+  const { logout } = useAuth();
+
+  const { isAuthenticated } = useAuth();
+  const userId = JSON.parse(localStorage.getItem("user")).id;
 
   return (
     <>
@@ -38,8 +44,9 @@ export function Sidebar({ username }) {
       </div>
 
       <aside
-        className={`${isOpen ? "left-0" : "left-[-30rem]"
-          } bg-custom-blue w-[300px] rounded-tr-[3rem] fixed top-0 left-0 h-full grid gap-[30px] justify-center content-around font-main z-50 transition-all duration-500 lg:left-0`}
+        className={`${
+          isOpen ? "left-0" : "left-[-30rem]"
+        } bg-custom-blue w-[300px] rounded-tr-[3rem] fixed top-0 left-0 h-full grid gap-[30px] justify-center content-around font-main z-50 transition-all duration-500 lg:left-0`}
       >
         <button
           className="absolute top-0 left-[19rem] lg:hidden"
@@ -63,7 +70,11 @@ export function Sidebar({ username }) {
               <h3 className="font-medium font-secondary text-xl text-white">
                 {username}
               </h3>
-              <NavLink to="/profile" className="text-sm text-white/60">
+
+              <NavLink
+                to={isAuthenticated() ? `/overview/${userId}` : "/login"}
+                className="text-sm text-white/60"
+              >
                 View Profile
               </NavLink>
             </div>
@@ -71,7 +82,7 @@ export function Sidebar({ username }) {
 
           <div className="flex flex-col text-white font-bold gap-[20px]">
             <NavLink
-              to="/"
+              to={isAuthenticated() ? `/dashboard/${userId}` : "/login"}
               aria-current="page"
               className="flex gap-[10px] px-[20px] py-[10px] hover:bg-white/10 hover:rounded-[10px]"
             >
@@ -80,32 +91,23 @@ export function Sidebar({ username }) {
             </NavLink>
 
             <NavLink
-              to="/overview"
+              to={isAuthenticated() ? `/overview/${userId}` : "/login"}
               className="flex gap-[10px] px-[20px] py-[10px] hover:bg-white/10 hover:rounded-[10px]"
-              href=""
             >
               <OverviewIcon />
               Overview
             </NavLink>
 
             <NavLink
-              to="/events"
+              to={isAuthenticated() ? `/events/${userId}` : "/login"}
               className="flex gap-[10px] px-[20px] py-[10px] hover:bg-white/10 hover:rounded-[10px]"
             >
               <TaskIcon />
               Tasks
             </NavLink>
 
-            <a
-              className="flex gap-[10px] px-[20px] py-[10px] hover:bg-white/10 hover:rounded-[10px]"
-              href=""
-            >
-              <CourseIcon />
-              Courses
-            </a>
-
             <NavLink
-              to="/form"
+              to={isAuthenticated() ? `/form/${userId}` : "/login"}
               className="flex gap-[10px] px-[20px] py-[10px] hover:bg-white/10 hover:rounded-[10px]"
             >
               <SettingsIcon w={26} h={26} color={"white"} />
@@ -117,13 +119,13 @@ export function Sidebar({ username }) {
         <div className="flex flex-col gap-[30px] text-white font-bold ">
           <div className="border-solid border-[1px] border-white border-opacity-75 rounded-full w-full h-auto"></div>
 
-          <a
+          <button
+            onClick={logout}
             className="flex gap-[10px] px-[20px] py-[10px] hover:bg-white/10 hover:rounded-[10px]"
-            href=""
           >
             <LogoutIcon />
             Log out
-          </a>
+          </button>
         </div>
       </aside>
     </>

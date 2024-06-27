@@ -4,6 +4,8 @@ import { Input } from "../registration/Input.jsx";
 import React, { useState } from "react";
 import { useAuth } from "../hooks/useAuth";
 
+import { NavLink } from "react-router-dom";
+
 export function Login() {
   const { login, error, loading } = useAuth(); // Usa el hook useAuth para realizar el login
 
@@ -66,12 +68,12 @@ export function Login() {
             Forgot password?
           </a>
 
-          <a
+          <NavLink
+            to={"/signin"}
             className="font-main underline font-semibold text-custom-dark opacity-50 hover:opacity-100 text-sm"
-            href="{#}"
           >
             Create Account
-          </a>
+          </NavLink>
         </div>
       </div>
     </div>
