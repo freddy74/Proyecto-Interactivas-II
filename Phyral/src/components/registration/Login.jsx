@@ -30,7 +30,7 @@ export function Login() {
 
         <form className="grid align-center gap-4 w-[50%] m-auto max-lg:w-[80%]">
           <label className="text-xs text-custom-dark font-medium opacity-80">
-            username
+            Email
           </label>
           <Input />
 
