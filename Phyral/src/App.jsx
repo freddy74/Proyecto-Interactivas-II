@@ -5,23 +5,22 @@ import { Dashboard } from "./components/routes/Dashboard.jsx";
 import { Profile } from "./components/routes/Profile.jsx";
 import { Events } from "./components/routes/Events.jsx";
 import { Overview } from "./components/routes/Overview.jsx";
-import { NewDashboard } from "./components/routes/NewDasboard.jsx";
+// import { NewDashboard } from "./components/routes/NewDasboard.jsx";
 import { Form } from "./components/routes/Form.jsx";
 import { Login } from "./components/registration/Login.jsx";
 
 import { EventDetailsPopup } from "./components/events/EventDetailsPopup.jsx";
 import { SignIn } from "./components/registration/SignIn.jsx";
-
+import { useAuth } from "./components/hooks/useAuth.js";
 
 export function App() {
+  const { isAuthenticated } = useAuth();
   return (
     <>
       <Routes>
-        <Route path="/" element={<Dashboard />} />
-        <Route path="/profile" element={<Profile />} />
-        <Route path="/events" element={<Events />} />
-        <Route
-          path="/event"
+        {/* <Route path="/events" element={<Events />} /> */}
+        {/* <Route
+          path="/event/:userId"
           element={
             <EventDetailsPopup
               eventName="React Homework"
@@ -33,12 +32,34 @@ export function App() {
               description="Lorem ipsum dolor sit amet consectetur. Ut euismod venenatis nisi feugiat eleifend ultrices purus penatibus nibh."
             />
           }
-        />
-        <Route path="*" element={<Navigate to="/" />} />
-        <Route path="/overview" element={<Overview />} />
-        <Route path="/form" element={<Form />} />
+        /> */}
+
+      {/* Rutas públicas */} 
+        <Route path="*" element={<Navigate to="/login" />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/login" element={<SignIn />} />
+        <Route path="/signin" element={<SignIn />} />
+
+      {/* Rutas privadas */}
+        <Route
+          path="/dashboard/:userId"
+          element={isAuthenticated() ? <Dashboard /> : <Navigate to="/login" />}
+        />
+        <Route
+          path="/form/:userId"
+          element={isAuthenticated() ? <Form /> : <Navigate to="/login" />}
+        />
+        <Route
+          path="/profile/:userId"
+          element={isAuthenticated() ? <Profile /> : <Navigate to="/login" />}
+        />
+        <Route
+          path="/events/:userId"
+          element={isAuthenticated() ? <Events /> : <Navigate to="/login" />}
+        />
+        <Route
+          path="/overview/:userId"
+          element={isAuthenticated() ? <Overview /> : <Navigate to="/login" />}
+        />
       </Routes>
     </>
   );

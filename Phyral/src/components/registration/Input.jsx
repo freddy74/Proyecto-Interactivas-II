@@ -1,9 +1,13 @@
-export function Input({type = "text", name=""}) {
-    return (
-      <input
-        className="w-full border-solid border-custom-blue border-[0.5px] border-opacity-50 rounded bg-custom-light-blue"
-        type={type}
-        name={name}
-      />
-    );
-  }
+const Input = ({ type = 'text', value, onChange, placeholder }) => {
+  return (
+    <input
+      type={type}
+      value={value}
+      onChange={onChange}
+      placeholder={placeholder}
+      className="border rounded-md px-3 py-2 outline-none focus:ring-2 focus:ring-blue-300"
+    />
+  );
+};
+
+export { Input };

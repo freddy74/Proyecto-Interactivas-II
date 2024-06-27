@@ -8,7 +8,8 @@ import { EventCard } from "../events/EventCard";
 import "../../index.css";
 import { NotificationsBar } from "../navigation/NotificationsBar";
 
-export function Dashboard() {
+export function Dashboard({isAuthenticated}) {
+  
   return (
     
     <div className="flex justify-end text-custom-dark">

@@ -10,6 +10,8 @@ export const useAuth = () => {
     setLoading(true);
     setError(null);
     try {
+      console.log("Attempting to login with", { email, password });
+
       const response = await fetch("http://phyralbk.test/api/login", {
         method: "POST",
         headers: {
@@ -20,21 +22,22 @@ export const useAuth = () => {
 
       if (!response.ok) {
         const errorData = await response.json();
-        console.error("Error de inicio de sesión:", errorData);
-        throw new Error(errorData.message || "Inicio de sesión fallido");
+        console.error("Login error:", errorData);
+        throw new Error(errorData.message || "Login failed");
       }
 
       const data = await response.json();
+      console.log("Login successful, response data:", data);
 
       localStorage.setItem("token", data.accessToken);
       localStorage.setItem("user", JSON.stringify(data.user));
 
       const userId = data.user.id;
-      console.log("ID de usuario:", userId);
+      console.log("User ID:", userId);
 
       navigate(`/dashboard/${userId}`);
     } catch (err) {
-      console.error("Error durante el inicio de sesión:", err.message);
+      console.error("Error during login:", err.message);
       setError(err.message);
     } finally {
       setLoading(false);
@@ -54,9 +57,13 @@ export const useAuth = () => {
         body: JSON.stringify({ name, lastname, email, password }),
       });
 
+      console.log(response);
+
       const data = await response.json();
 
       if (!response.ok) {
+        console.log(data);
+
         if (response.status === 422) {
           if (data.errors && data.errors.password) {
             throw new Error(data.errors.password[0]);
@@ -72,11 +79,11 @@ export const useAuth = () => {
       localStorage.setItem("user", JSON.stringify(data.user));
 
       const userId = data.user.id;
-      console.log("ID de usuario:", userId);
+      console.log("User ID:", userId);
 
       navigate(`/login`);
     } catch (error) {
-      console.error("Error en la función de registro:", error);
+      console.error("Error en la función register:", error);
       setError(error.message);
     } finally {
       setLoading(false);
