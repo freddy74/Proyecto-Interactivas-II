@@ -14,12 +14,26 @@ export function Login() {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    console.log('Submitting login form with:', { email, password });
+    console.log("Submitting login form with:", { email, password });
     login(email, password); // Llama a la función login del hook useAuth
   };
 
   return (
     <div className="bg-white flex max-lg:flex-col">
+      <div className="bg-[url('./assets/imgs/signinbg.jpg')] bg-cover h-screen w-[60%] flex flex-col justify-center gap-6 max-lg:hidden">
+        <section className="p-20">
+          <h2 className="text-custom-dark font-secondary text-9xl hidden font-bold sm:block">
+            Discover Phyral Universe
+          </h2>
+          <p className="text-base hidden sm:block font-semibold">
+            Lorem ipsum dolor sit amet consectetur. Nibh volutpat elementum
+            massa sollicitudin varius rhoncus sapien. Blandit ipsum eget tempor
+            diam nunc tincidunt nunc et. At blandit condimentum at tortor orci
+            vulputate tincidunt tellus eros. Et blandit adipiscing vitae enim
+            eget. Et adipiscing non arcu non eget. Dui porta fermentum lacus.
+          </p>
+        </section>
+      </div>
       <div className="bg-white items-center justify-center lg:w-[40%] w-full h-screen">
         <img className="m-[4rem_auto]" src={logo} alt="logo" />
         <h2 className="text-3xl font-main font-bold pb-7 text-center text-custom-dark">
